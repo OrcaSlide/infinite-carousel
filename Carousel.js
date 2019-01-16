@@ -2,7 +2,8 @@ const DEFAULT = {
     arrowNext: "ArrowNext",
     arrowPrevious: "ArrowPrevious",
     carouselTrack: "CarouselTrack",
-    moveItems: 3,
+    moveItems: 1,
+    time: 500,
 };
 
 /**
@@ -42,6 +43,13 @@ class CircularCarousel {
                 this.config.trackSize = TRACK_SIZE;
                 this.config.success = IS_ACTIVE;
                 this.buildCircleCarousel();
+            } else {
+                const {
+                    arrowNext: NEXT,
+                    arrowPrevious: PREVIOUS,
+                } = this.config;
+                NEXT.style.display = "none";
+                PREVIOUS.style.display = "none";
             }
         }
     }
@@ -64,7 +72,7 @@ class CircularCarousel {
             arrowNext, arrowPrevious,
             itemSize, trackSize, items,
         } = this.config;
-        const CLONE = trackSize / itemSize;
+        const CLONE = Math.floor(trackSize / itemSize);
         const IS_CLONE = this.cloneItem(CLONE);
         if (IS_CLONE) {
             const PIXELS = itemSize * CLONE;
@@ -132,15 +140,15 @@ class CircularCarousel {
     translateCarousel(live = false) {
         const {
             carouselTrack: $CONTAINER,
-            pixels, endPoint, startPoint,
+            pixels, endPoint, startPoint, time,
         } = this.config;
         const TRANSFORM = `transform: translate3d(-${pixels}px, 0px, 0px);`;
-        const TRANSITION = "transition:transform 500ms ease 0s";
+        const TRANSITION = `transition:transform ${time}ms ease 0s`;
         const STYLE = TRANSFORM + ((live) ? TRANSITION : "");
         $CONTAINER.setAttribute("style", STYLE);
         if (endPoint === pixels || pixels === 0) {
             this.config.pixels = (pixels === 0) ? (endPoint - startPoint) : startPoint;
-            setTimeout(() => this.translateCarousel(), 500);
+            setTimeout(() => this.translateCarousel(), time);
         }
     }
 }
