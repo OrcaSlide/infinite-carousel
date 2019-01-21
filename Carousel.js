@@ -47,11 +47,14 @@ class CircularCarousel {
      * @return {void}
      */
     actionArrow(isNext = false) {
-        const { itemSize, moveItems, pixels } = this.config;
-        const MOVE_TO = (itemSize * moveItems);
-        const PIXELS = (isNext) ? (pixels + MOVE_TO) : (pixels - MOVE_TO);
-        this.config.pixels = PIXELS;
-        this.translateCarousel(true);
+        if (this.config.isActive) {
+            const { itemSize, moveItems, pixels } = this.config;
+            const MOVE_TO = (itemSize * moveItems);
+            const PIXELS = (isNext) ? (pixels + MOVE_TO) : (pixels - MOVE_TO);
+            this.config.pixels = PIXELS;
+            this.config.isActive = false;
+            this.translateCarousel(true);
+        }
     }
 
     /**
@@ -72,6 +75,7 @@ class CircularCarousel {
             this.config.endPoint = (items * itemSize) + PIXELS;
             this.config.pixels = itemSize * CLONE;
             this.config.moveItems = (moveItems === 0 || moveItems > CLONE) ? CLONE : moveItems;
+            this.config.isActive = true;
             this.translateCarousel();
             arrowNext.addEventListener("click", () => this.actionArrow(true));
             arrowPrevious.addEventListener("click", () => this.actionArrow());
@@ -232,17 +236,22 @@ class CircularCarousel {
      * @return {void}
      */
     translateCarousel(live = false) {
-        const {
-            carouselTrack: $CONTAINER,
-            pixels, endPoint, startPoint, time,
-        } = this.config;
-        const TRANSFORM = `transform: translate3d(-${pixels}px, 0px, 0px);`;
-        const TRANSITION = `transition:transform ${time}ms ease 0s`;
-        const STYLE = TRANSFORM + ((live) ? TRANSITION : "");
-        $CONTAINER.setAttribute("style", STYLE);
-        if (endPoint === pixels || pixels === 0) {
-            this.config.pixels = (pixels === 0) ? (endPoint - startPoint) : startPoint;
-            setTimeout(() => this.translateCarousel(), time);
+        if (!this.config.isActive) {
+            const {
+                carouselTrack: $CONTAINER,
+                pixels, endPoint, startPoint, time,
+            } = this.config;
+            const TRANSFORM = `transform: translate3d(-${pixels}px, 0px, 0px);`;
+            const TRANSITION = `transition:transform ${time}ms ease 0s`;
+            const STYLE = TRANSFORM + ((live) ? TRANSITION : "");
+            $CONTAINER.setAttribute("style", STYLE);
+            setTimeout(() => {
+                if (endPoint === pixels || pixels === 0) {
+                    this.config.pixels = (pixels === 0) ? (endPoint - startPoint) : startPoint;
+                    this.translateCarousel();
+                }
+                this.config.isActive = true;
+            }, time);
         }
     }
 
