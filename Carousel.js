@@ -236,23 +236,21 @@ class CircularCarousel {
      * @return {void}
      */
     translateCarousel(live = false) {
-        if (!this.config.isActive) {
-            const {
-                carouselTrack: $CONTAINER,
-                pixels, endPoint, startPoint, time,
-            } = this.config;
-            const TRANSFORM = `transform: translate3d(-${pixels}px, 0px, 0px);`;
-            const TRANSITION = `transition:transform ${time}ms ease 0s`;
-            const STYLE = TRANSFORM + ((live) ? TRANSITION : "");
-            $CONTAINER.setAttribute("style", STYLE);
-            setTimeout(() => {
-                if (endPoint === pixels || pixels === 0) {
-                    this.config.pixels = (pixels === 0) ? (endPoint - startPoint) : startPoint;
-                    this.translateCarousel();
-                }
-                this.config.isActive = true;
-            }, time);
-        }
+        const {
+            carouselTrack: $CONTAINER,
+            pixels, endPoint, startPoint, time,
+        } = this.config;
+        const TRANSFORM = `transform: translate3d(-${pixels}px, 0px, 0px);`;
+        const TRANSITION = `transition:transform ${time}ms ease 0s`;
+        const STYLE = TRANSFORM + ((live) ? TRANSITION : "");
+        $CONTAINER.setAttribute("style", STYLE);
+        setTimeout(() => {
+            if (endPoint === pixels || pixels === 0) {
+                this.config.pixels = (pixels === 0) ? (endPoint - startPoint) : startPoint;
+                this.translateCarousel();
+            }
+            this.config.isActive = true;
+        }, time);
     }
 
     /* =========================================== */
