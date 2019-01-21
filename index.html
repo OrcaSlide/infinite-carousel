@@ -1,61 +1,103 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es, en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="./favicon.ico?v=3" type="image/x-icon">
-    <link rel="stylesheet" href="./index.css">
-    <title>.: Carousel :.</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <title>.: Circle Carousel :.</title>
 </head>
-<body>
-    <!-- Begin : Contenedor -->
-    <div class="Contenedor">
-        <div class="Arrow">
-            <button id="Previous"><</button>
-        </div>
+    <body>
+        <!-- Begin : Carousel -->
+        <div class="Carousel">
 
-        <div class="Carousel__Container">
-            <div class="Carousel__Track" id="Track">
-                <div class="Item"><img src="http://via.placeholder.com/300x250/0059b3/FFFFFF/?text=1" alt=""></div>
-                <div class="Item"><img src="http://via.placeholder.com/300x250/b30059/FFFFFF/?text=2" alt=""></div>
-                <div class="Item"><img src="http://via.placeholder.com/300x250/00b386/FFFFFF/?text=3" alt=""></div>
-                <div class="Item"><img src="http://via.placeholder.com/300x250/0059b3/FFFFFF/?text=4" alt=""></div>
-                <div class="Item"><img src="http://via.placeholder.com/300x250/b30059/FFFFFF/?text=5" alt=""></div>
-                <div class="Item"><img src="http://via.placeholder.com/300x250/00b386/FFFFFF/?text=6" alt=""></div>
-                <div class="Item"><img src="http://via.placeholder.com/300x250/0059b3/FFFFFF/?text=7" alt=""></div>
-                <div class="Item"><img src="http://via.placeholder.com/300x250/b30059/FFFFFF/?text=8" alt=""></div>
-                <div class="Item"><img src="http://via.placeholder.com/300x250/00b386/FFFFFF/?text=9" alt=""></div>
-                <div class="Item"><img src="http://via.placeholder.com/300x250/0059b3/FFFFFF/?text=10" alt=""></div>
-                <div class="Item"><img src="http://via.placeholder.com/300x250/b30059/FFFFFF/?text=11" alt=""></div>
-                <div class="Item"><img src="http://via.placeholder.com/300x250/00b386/FFFFFF/?text=12" alt=""></div>
-                <div class="Item"><img src="http://via.placeholder.com/300x250/0059b3/FFFFFF/?text=13" alt=""></div>
-                <div class="Item"><img src="http://via.placeholder.com/300x250/b30059/FFFFFF/?text=14" alt=""></div>
-                <div class="Item"><img src="http://via.placeholder.com/300x250/00b386/FFFFFF/?text=15" alt=""></div>
+            <div class="Carousel__Arrow">
+                <button class="Carousel__Arrow-Previous" id="Previous">
+                    <span class="Display">
+                        This is the Previous Button Container
+                    </span>
+                </button>
             </div>
+
+            <div class="Carousel__Container">
+                <div class="Carousel__Track" id="Track">
+                    <div class="Carousel__Item">
+                        <img class="Carousel__Image" src="../assets/images/Image-01.jpg" alt="Star Wars Image">
+                    </div>
+                    <div class="Carousel__Item">
+                        <img class="Carousel__Image" src="../assets/images/Image-02.jpg" alt="Star Wars Image">
+                    </div>
+                    <div class="Carousel__Item">
+                        <img class="Carousel__Image" src="../assets/images/Image-03.jpg" alt="Star Wars Image">
+                    </div>
+                    <div class="Carousel__Item">
+                        <img class="Carousel__Image" src="../assets/images/Image-04.jpg" alt="Star Wars Image">
+                    </div>
+                    <div class="Carousel__Item">
+                        <img class="Carousel__Image" src="../assets/images/Image-05.jpg" alt="Star Wars Image">
+                    </div>
+                    <div class="Carousel__Item">
+                        <img class="Carousel__Image" src="../assets/images/Image-06.jpg" alt="Star Wars Image">
+                    </div>
+                    <div class="Carousel__Item">
+                        <img class="Carousel__Image" src="../assets/images/Image-07.jpg" alt="Star Wars Image">
+                    </div>
+                    <div class="Carousel__Item">
+                        <img class="Carousel__Image" src="../assets/images/Image-08.jpg" alt="Star Wars Image">
+                    </div>
+                    <div class="Carousel__Item">
+                        <img class="Carousel__Image" src="../assets/images/Image-09.jpg" alt="Star Wars Image">
+                    </div>
+                    <div class="Carousel__Item">
+                        <img class="Carousel__Image" src="../assets/images/Image-10.jpg" alt="Star Wars Image">
+                    </div>
+                    <div class="Carousel__Item">
+                        <img class="Carousel__Image" src="../assets/images/Image-11.jpg" alt="Star Wars Image">
+                    </div>
+                    <div class="Carousel__Item">
+                        <img class="Carousel__Image" src="../assets/images/Image-12.jpg" alt="Star Wars Image">
+                    </div>
+                    <div class="Carousel__Item">
+                        <img class="Carousel__Image" src="../assets/images/Image-13.jpg" alt="Star Wars Image">
+                    </div>
+                    <div class="Carousel__Item">
+                        <img class="Carousel__Image" src="../assets/images/Image-14.jpg" alt="Star Wars Image">
+                    </div>
+                    <div class="Carousel__Item">
+                        <img class="Carousel__Image" src="../assets/images/Image-15.jpg" alt="Star Wars Image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="Carousel__Arrow">
+                <button class="Carousel__Arrow-Next" id="Next">
+                    <span class="Display">
+                        This is the Next Button Container
+                    </span>
+                </button>
+            </div>
+
         </div>
 
-        <div class="Arrow">
-            <button id="Next">></button>
-        </div>
-    </div>
-    <!-- End   : Contenedor -->
-    <script type="text/javascript" src="./Carousel.js"></script>
-    <script type="text/javascript">
-        document.onreadystatechange = () => {
-            if (document.readyState === "interactive") {
-                console.time("CircularCarousel");
-                const CONFIG = {
-                    arrowNext: "#Next",
-                    arrowPrevious: "#Previous",
-                    carouselTrack: "#Track",
-                };
-                const CAROUSEL = new CircularCarousel(CONFIG);
-                console.log("Config => %O", CAROUSEL.config);
-                console.timeEnd("CircularCarousel");
+        <!-- End : Carousel -->
+        <script type="text/javascript" src="./Carousel.js"></script>
+        <script type="text/javascript">
+            document.onreadystatechange = () => {
+                if (document.readyState === "interactive") {
+                    console.time("CircularCarousel");
+                    const CONFIG = {
+                        arrowNext: "#Next",
+                        arrowPrevious: "#Previous",
+                        carouselTrack: "#Track",
+                    };
+                    const CAROUSEL = new CircularCarousel(CONFIG);
+                    console.log("Config => %O", CAROUSEL.config);
+                    console.timeEnd("CircularCarousel");
+                }
             }
-        }
-    </script>
-</body>
+        </script>
+    </body>
 </html>

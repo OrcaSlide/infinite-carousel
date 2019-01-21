@@ -1,10 +1,3 @@
-const DEFAULT = {
-    arrowNext: "ArrowNext",
-    arrowPrevious: "ArrowPrevious",
-    carouselTrack: "CarouselTrack",
-    moveItems: 3,
-};
-
 /**
  * Logic for CircularCarousel.
  *
@@ -20,8 +13,7 @@ class CircularCarousel {
      * @param {object} config Initial config for Carousel.
      */
     constructor(config) {
-        this.config = { success: false };
-        this.config = Object.assign(DEFAULT, config);
+        this.settings = config;
         const {
             arrowNext, arrowPrevious, carouselTrack,
         } = this.config;
@@ -41,11 +33,19 @@ class CircularCarousel {
                 this.config.itemSize = ITEM_SIZE;
                 this.config.trackSize = TRACK_SIZE;
                 this.config.success = IS_ACTIVE;
-                this.buildCircleCarousel();
+                this.buildCarousel();
+            } else {
+                this.hiddenArrow();
             }
         }
     }
 
+    /**
+     * Enabled action for arrows.
+     *
+     * @param  {Boolean} isNext (Optional)Indicate the type of action for the arrow.
+     * @return {void}
+     */
     actionArrow(isNext = false) {
         const { itemSize, moveItems, pixels } = this.config;
         const MOVE_TO = (itemSize * moveItems);
@@ -59,21 +59,70 @@ class CircularCarousel {
      *
      * @return {void}
      */
-    buildCircleCarousel() {
+    buildCarousel() {
         const {
-            arrowNext, arrowPrevious,
-            itemSize, trackSize, items,
+            arrowNext, arrowPrevious, itemSize,
+            trackSize, items, moveItems,
         } = this.config;
-        const CLONE = trackSize / itemSize;
+        const CLONE = Math.floor(trackSize / itemSize);
         const IS_CLONE = this.cloneItem(CLONE);
         if (IS_CLONE) {
             const PIXELS = itemSize * CLONE;
             this.config.startPoint = PIXELS;
             this.config.endPoint = (items * itemSize) + PIXELS;
             this.config.pixels = itemSize * CLONE;
+            this.config.moveItems = (moveItems === 0 || moveItems > CLONE) ? CLONE : moveItems;
             this.translateCarousel();
             arrowNext.addEventListener("click", () => this.actionArrow(true));
             arrowPrevious.addEventListener("click", () => this.actionArrow());
+            this.buildSwipeCarousel();
+        }
+    }
+
+    /**
+     * Enabled swipe in the carousel`s.
+     *
+     * @return {void}.
+     */
+    buildSwipeCarousel() {
+        const DEVICE = Utils.isMobile;
+
+        if (DEVICE !== "desktop") {
+            const { carouselTrack, swipe } = this.config;
+            const TRACK = carouselTrack.parentNode || null;
+            if (TRACK) {
+                if (DEVICE === "phone") this.hiddenArrow();
+                TRACK.addEventListener("touchstart", (action) => {
+                    const TOUCH = Utils.existFields(action, "touches.0", null);
+                    if (TOUCH) {
+                        swipe.startX = TOUCH.screenX;
+                        swipe.startY = TOUCH.screenY;
+                    }
+                }, false);
+
+                TRACK.addEventListener("touchmove", (action) => {
+                    const TOUCH = Utils.existFields(action, "touches.0", null);
+                    if (TOUCH) {
+                        swipe.endX = TOUCH.screenX;
+                        swipe.endY = TOUCH.screenY;
+                        swipe.direction = this.getDirecctionSlide();
+                    }
+                }, false);
+
+                TRACK.addEventListener("touchend", () => {
+                    if (swipe.direction !== "") {
+                        const IS_LEFT = (swipe.direction === "left");
+                        this.actionArrow(IS_LEFT);
+                        swipe.direction = "";
+                    }
+                }, false);
+            } else {
+                /* eslint-disable */
+                console.groupCollapsed("%c 🚫 [CircularCarousel => Error implement the touch events]", "color:#ff3333;");
+                console.error(Error);
+                console.groupEnd();
+                /* eslint-enable */
+            }
         }
     }
 
@@ -129,18 +178,113 @@ class CircularCarousel {
         return element;
     }
 
+    /**
+     * Get direction for action swipe.
+     *
+     * @return {String}
+     */
+    getDirecctionSlide() {
+        const { swipe } = this.config;
+
+        const HZR_X1 = ((swipe.endX - swipe.min_x) > swipe.startX);
+        const HZR_X2 = ((swipe.endX + swipe.min_x) < swipe.startX);
+        const HZR_Y1 = (swipe.endY < (swipe.startY + swipe.max_y));
+        const HZR_Y2 = (swipe.startY > (swipe.endY - swipe.max_y));
+
+        const VERT_Y1 = ((swipe.endY - swipe.min_y) > swipe.startY);
+        const VERT_Y2 = ((swipe.endY + swipe.min_y) < swipe.startY);
+        const VERT_X1 = (swipe.endX < (swipe.startX + swipe.max_x));
+        const VERT_X2 = (swipe.startX > (swipe.endX - swipe.max_x));
+
+        const IS_HORIZONTAL = ((HZR_X1 || HZR_X2) && (HZR_Y1 && HZR_Y2));
+        const IS_VERTICAL = ((VERT_Y1 || VERT_Y2) && (VERT_X1 && VERT_X2));
+
+        let direction = "";
+
+        if (IS_HORIZONTAL) {
+            direction = (swipe.endX > swipe.startX) ? "right" : "left";
+        } else if (IS_VERTICAL) {
+            direction = (swipe.endY > swipe.startY) ? "bottom" : "top";
+        }
+        return direction;
+    }
+
+    /**
+     * Arrow hidden when the carousel is not valid
+     * or displayed on a smart phone.
+     *
+     * @return {Void}
+     */
+    hiddenArrow() {
+        const {
+            arrowNext: NEXT,
+            arrowPrevious: PREVIOUS,
+        } = this.config;
+        NEXT.parentNode.style.display = "none";
+        PREVIOUS.parentNode.style.display = "none";
+    }
+
+
+    /**
+     * Create anitamiton for the carousel.
+     *
+     * @param  {Boolean} (Optional)Enable animation for the carousel.
+     * @return {void}
+     */
     translateCarousel(live = false) {
         const {
             carouselTrack: $CONTAINER,
-            pixels, endPoint, startPoint,
+            pixels, endPoint, startPoint, time,
         } = this.config;
         const TRANSFORM = `transform: translate3d(-${pixels}px, 0px, 0px);`;
-        const TRANSITION = "transition:transform 500ms ease 0s";
+        const TRANSITION = `transition:transform ${time}ms ease 0s`;
         const STYLE = TRANSFORM + ((live) ? TRANSITION : "");
         $CONTAINER.setAttribute("style", STYLE);
         if (endPoint === pixels || pixels === 0) {
             this.config.pixels = (pixels === 0) ? (endPoint - startPoint) : startPoint;
-            setTimeout(() => this.translateCarousel(), 500);
+            setTimeout(() => this.translateCarousel(), time);
         }
+    }
+
+    /* =========================================== */
+    /*       Eventos Setters and Getters           */
+    /* =========================================== */
+
+    /**
+     * Begin the config.
+     *
+     * @param  {Object} config Params for the config.
+     * @return {Void}
+     */
+    set settings(config) {
+        const DEFAULT = {
+            arrowNext: "ArrowNext",
+            arrowPrevious: "ArrowPrevious",
+            carouselTrack: "CarouselTrack",
+            moveItems: 0,
+            time: 500,
+            swipe: {
+                direction: "",
+                startX: 0,
+                startY: 0,
+                endX: 0,
+                endY: 0,
+                min_x: 20,
+                max_x: 40,
+                min_y: 40,
+                max_y: 50,
+            },
+        };
+        this.config = Object.assign(DEFAULT, config);
+    }
+}
+
+/* ======================= */
+
+class Auxiliar {
+    static set init(config) {
+        const CONFIG = JSON.stringify(config);
+        const NEW_CONFIG = JSON.parse(CONFIG);
+        return new CircularCarousel(NEW_CONFIG);
     }
 }

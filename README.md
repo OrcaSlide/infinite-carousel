@@ -1,2 +1,2 @@
-# circle-carousel
-Carousel circular
+# Carousel Circular Demo
+### by Jorge Méndez
