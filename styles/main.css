@@ -335,6 +335,15 @@ template {
     width: 100%;
 }
 
+/*Estilo para pruebas puedes quitarlo*/
+.aux {
+    right: 0;
+    top:0;
+}
+
+
+
+
 .Carousel__Container {
     background-color: #336699;
     display: inline-block;

@@ -146,11 +146,13 @@ class CircularCarousel {
                 top: CHILDREN.slice(-limit),
             });
 
-            ITEMS.forEach((item) => {
+            ITEMS.forEach((item, index) => {
                 const KEY = item[0];
                 const CLONE = (KEY === "bottom") ? item[1] : item[1].reverse();
-                CLONE.forEach((element) => {
+                CLONE.forEach((element, index) => {
+                    const ID = element.id || "item";
                     const DOM = element.cloneNode(true);
+                    DOM.id = `${ID}-clone${index}`;
                     if (KEY === "bottom") $CONTAINER.appendChild(DOM);
                     else $CONTAINER.insertBefore(DOM, $CONTAINER.firstChild);
                 });
@@ -294,4 +296,10 @@ class Auxiliar {
         const NEW_CONFIG = JSON.parse(CONFIG);
         return new CircularCarousel(NEW_CONFIG);
     }
+}
+
+
+function demo(id) {
+    const ID = `#${id}`;
+    document.querySelector(ID).style.opacity = ".5";
 }
