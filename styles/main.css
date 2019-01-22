@@ -341,9 +341,6 @@ template {
     top:0;
 }
 
-
-
-
 .Carousel__Container {
     background-color: #336699;
     display: inline-block;
@@ -373,6 +370,12 @@ template {
     display: inline-block;
     width: 300px;
 }
+
+.activo {
+    opacity: .3;
+}
+
+
 
 .Carousel__Image {
     max-width: 100%;

@@ -15,7 +15,8 @@ class CircularCarousel {
     constructor(config) {
         this.settings = config;
         const {
-            arrowNext, arrowPrevious, carouselTrack,
+            arrowNext, arrowPrevious,
+            carouselTrack,
         } = this.config;
 
         this.getElementDom(arrowNext, "arrowNext");
@@ -37,6 +38,37 @@ class CircularCarousel {
             } else {
                 this.hiddenArrow();
             }
+        }
+    }
+
+    /**
+     * Shows the item that is active.
+     *
+     * @return {void}
+     */
+    activeItem() {
+        const { carouselTrack: $CONTAINER, pin } = this.config;
+        if (pin) {
+            const ITEMS = [...$CONTAINER.children];
+            ITEMS.forEach((item, index) => {
+                item.addEventListener("click", () => {
+                    const ITEM_ACTIVE = $CONTAINER.dataset.active;
+                    const OLD_ITEM = ITEMS[ITEM_ACTIVE];
+                    const NEW_ITEM = ITEMS[index];
+                    const INDEX_OLD_ITEM = Utils.existFields(OLD_ITEM, "dataset.clone", null);
+                    const INDEX_NEW_ITEM = Utils.existFields(NEW_ITEM, "dataset.clone", null);
+                    const CLONE_NEW_ITEM = ITEMS[INDEX_NEW_ITEM] || null;
+                    const CLONE_OLD_ITEM = ITEMS[INDEX_OLD_ITEM] || null;
+
+                    OLD_ITEM.classList.remove(pin);
+                    if (CLONE_OLD_ITEM) CLONE_OLD_ITEM.classList.remove(pin);
+
+                    NEW_ITEM.classList.add(pin);
+                    if (CLONE_NEW_ITEM) CLONE_NEW_ITEM.classList.add(pin);
+
+                    $CONTAINER.dataset.active = index;
+                });
+            });
         }
     }
 
@@ -79,6 +111,7 @@ class CircularCarousel {
             this.translateCarousel();
             arrowNext.addEventListener("click", () => this.actionArrow(true));
             arrowPrevious.addEventListener("click", () => this.actionArrow());
+            this.activeItem();
             this.buildSwipeCarousel();
         }
     }
@@ -139,24 +172,29 @@ class CircularCarousel {
     cloneItem(limit) {
         let response = false;
         try {
-            const { carouselTrack: $CONTAINER } = this.config;
+            const { carouselTrack: $CONTAINER, items } = this.config;
             const CHILDREN = [...$CONTAINER.children];
             const ITEMS = Object.entries({
                 bottom: CHILDREN.slice(0, limit),
                 top: CHILDREN.slice(-limit),
             });
 
-            ITEMS.forEach((item, index) => {
+            ITEMS.forEach((item) => {
                 const KEY = item[0];
                 const CLONE = (KEY === "bottom") ? item[1] : item[1].reverse();
                 CLONE.forEach((element, index) => {
-                    const ID = element.id || "item";
                     const DOM = element.cloneNode(true);
-                    DOM.id = `${ID}-clone${index}`;
-                    if (KEY === "bottom") $CONTAINER.appendChild(DOM);
-                    else $CONTAINER.insertBefore(DOM, $CONTAINER.firstChild);
+                    let indexClone = index;
+                    if (KEY === "bottom") {
+                        indexClone = (items + index) + limit;
+                        $CONTAINER.appendChild(DOM);
+                    } else $CONTAINER.insertBefore(DOM, $CONTAINER.firstChild);
+                    /* eslint-disable */
+                    element.dataset.clone = indexClone;
+                    /* eslint-enable */
                 });
             });
+            $CONTAINER.dataset.active = limit;
             response = true;
         } catch (Error) {
             /* eslint-disable */
@@ -230,7 +268,6 @@ class CircularCarousel {
         PREVIOUS.parentNode.style.display = "none";
     }
 
-
     /**
      * Create anitamiton for the carousel.
      *
@@ -272,6 +309,7 @@ class CircularCarousel {
             carouselTrack: "CarouselTrack",
             moveItems: 0,
             time: 500,
+            pin: "",
             swipe: {
                 direction: "",
                 startX: 0,
@@ -279,8 +317,8 @@ class CircularCarousel {
                 endX: 0,
                 endY: 0,
                 min_x: 20,
-                max_x: 40,
-                min_y: 40,
+                max_x: 0,
+                min_y: 0,
                 max_y: 50,
             },
         };
