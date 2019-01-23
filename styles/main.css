@@ -335,12 +335,6 @@ template {
     width: 100%;
 }
 
-/*Estilo para pruebas puedes quitarlo*/
-.aux {
-    right: 0;
-    top:0;
-}
-
 .Carousel__Container {
     background-color: #336699;
     display: inline-block;
@@ -356,14 +350,14 @@ template {
     transform: translate3d(0, 0, 0);
 }
 
- .Carousel__Track {
+.Carousel__Track {
     width: auto;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
- }
+}
 
 .Carousel__Item {
     background-color: rgba(0, 0, 0, .5);
@@ -371,11 +365,9 @@ template {
     width: 300px;
 }
 
-.activo {
+.Carousel__Item-Active {
     opacity: .3;
 }
-
-
 
 .Carousel__Image {
     max-width: 100%;
