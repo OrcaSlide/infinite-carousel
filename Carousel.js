@@ -48,10 +48,11 @@ class CircularCarousel {
      */
     activeItem() {
         const { carouselTrack: $CONTAINER, pin } = this.config;
-        if (pin) {
+        if (pin !== null) {
             const ITEMS = [...$CONTAINER.children];
             ITEMS.forEach((item, index) => {
                 item.addEventListener("click", () => {
+                    const { enabled, disabled } = pin;
                     const ITEM_ACTIVE = $CONTAINER.dataset.active;
                     const OLD_ITEM = ITEMS[ITEM_ACTIVE];
                     const NEW_ITEM = ITEMS[index];
@@ -60,12 +61,19 @@ class CircularCarousel {
                     const CLONE_NEW_ITEM = ITEMS[INDEX_NEW_ITEM] || null;
                     const CLONE_OLD_ITEM = ITEMS[INDEX_OLD_ITEM] || null;
 
-                    OLD_ITEM.classList.remove(pin);
-                    if (CLONE_OLD_ITEM) CLONE_OLD_ITEM.classList.remove(pin);
+                    OLD_ITEM.classList.remove(enabled);
+                    OLD_ITEM.classList.add(disabled);
+                    if (CLONE_OLD_ITEM) {
+                        CLONE_OLD_ITEM.classList.remove(enabled);
+                        CLONE_OLD_ITEM.classList.add(disabled);
+                    }
 
-                    NEW_ITEM.classList.add(pin);
-                    if (CLONE_NEW_ITEM) CLONE_NEW_ITEM.classList.add(pin);
-
+                    NEW_ITEM.classList.add(enabled);
+                    NEW_ITEM.classList.remove(disabled);
+                    if (CLONE_NEW_ITEM) {
+                        CLONE_NEW_ITEM.classList.add(enabled);
+                        CLONE_NEW_ITEM.classList.remove(disabled);
+                    }
                     $CONTAINER.dataset.active = index;
                 });
             });
@@ -309,7 +317,7 @@ class CircularCarousel {
             carouselTrack: "CarouselTrack",
             moveItems: 0,
             time: 500,
-            pin: "",
+            pin: null,
             swipe: {
                 direction: "",
                 startX: 0,
