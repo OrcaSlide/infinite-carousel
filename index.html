@@ -915,7 +915,7 @@
 
             <div class="Carousel__VisualBox">
                 <div class="Carousel__Track" id="Track2">
-                    <div class="Carousel__Item-Active" id="Card-01">
+                    <div class="Carousel__Item" id="Card-01">
                         <div class="Items__ItemTypeA">
                             <div class="Items__ItemTypeAThumbnail">
                                 <div class="Items__ItemTypeAImageContainer">
@@ -1789,7 +1789,7 @@
             document.onreadystatechange = () => {
                 if (document.readyState === "interactive") {
                     console.time("CircularCarousel");
-                    const CONFIG = {
+                    Auxiliar.init = {
                         arrowNext: "#Next",
                         arrowPrevious: "#Previous",
                         carouselTrack: "#Track",
@@ -1798,14 +1798,12 @@
                             enabled: "Carousel__Item-Active"
                         },
                     };
-                    const CONFIG2 = {
+
+                    Auxiliar.init = {
                         arrowNext: "#Next2",
                         arrowPrevious: "#Previous2",
                         carouselTrack: "#Track2",
                     };
-                    const CAROUSEL = new CircularCarousel(CONFIG);
-                    new CircularCarousel(CONFIG2);
-                    console.log("Config => %O", CAROUSEL.config);
                     console.timeEnd("CircularCarousel");
                 }
             }
