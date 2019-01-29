@@ -306,8 +306,37 @@ template {
 
 /* Orca Circle Carousel Styles */
 
+body {
+    background: #333333;
+    color: #dadaca;
+}
+
 .Display {
     display: none;
+}
+
+.Title {
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4em;
+    margin: 30px 0px 10px 0px;
+}
+
+.Credits {
+    font-family: sans-serif;
+    font-size: 1em;
+    text-align: center;
+    margin: 0px 0px 5px 0px;
+    color: #5d5d5d;
+}
+
+.Version {
+    font-family: sans-serif;
+    font-size: .8em;
+    text-align: center;
+    margin: 0px 0px 50px 0px;
+    color: #5d5d5d;
 }
 
 .Carousel {
@@ -315,9 +344,17 @@ template {
     margin: auto;
     max-width: 1140px;
     position: relative;
+    display: flex;
 }
 
 .Carousel__Arrow {
+    background: red;
+    display: flex;
+    width: 50px;
+    align-items: center;
+}
+
+/* .Carousel__Arrow {
     margin: 0;
     width: 50px;
     position: absolute;
@@ -325,24 +362,19 @@ template {
     height: 100%;
     display: flex;
     align-items: center;
-}
+} */
 
 .Carousel__Arrow-Previous,
 .Carousel__Arrow-Next {
     background-color: #600080;
     color: white;
     height: 50px;
-    width: 100%;
+    width: 50px;
+    border: none;
 }
 
-.Carousel__Container {
-    background-color: #336699;
-    display: inline-block;
+.Carousel__VisualBox {
     overflow: hidden;
-    overflow-y: hidden;
-    vertical-align: top;
-    width: 100%;
-    white-space: nowrap;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
@@ -351,24 +383,29 @@ template {
 }
 
 .Carousel__Track {
-    width: auto;
+    display: flex;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+    overflow: scroll;
 }
 
-.Carousel__Item {
-    background-color: rgba(0, 0, 0, .5);
-    display: inline-block;
-    width: 300px;
+.Carousel__Item,
+.Carousel__Item-Active {
+    background-color: red;
 }
 
 .Carousel__Item-Active {
     opacity: .3;
 }
 
-.Carousel__Image {
+.Items__ItemTypeAImage {
     max-width: 100%;
+    font-size: 0;
+}
+
+.Items__ItemTypeA {
+    width: 300px;
 }

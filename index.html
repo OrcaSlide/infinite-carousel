@@ -8,25 +8,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="./favicon.ico?v=3" type="image/x-icon">
     <link rel="stylesheet" href="./styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <title>.: Circle Carousel :.</title>
 </head>
     <body>
-        <h1>
-            Orcaslide Circle Carousel
+        <h1 class="Title">
+            Circle Carousels
         </h1>
-        <h3>
-            by Jorge Méndez
+        <h3 class="Credits">
+            by Jorge Méndez & Alan Mena (Kolibri)
         </h3>
-        <h3>
-            & The Kolibri
-        </h3>
-        <h2>
-            v0.5.0
+        <h2 class="Version">
+            January 2019 v0.6.0 
         </h2>
-        <h2>
-            January
-        </h2>
-        <!-- Begin : Carousel -->
+        <!-- Begin : Carousel HBO -->
         <div class="Carousel">
 
             <div class="Carousel__Arrow">
@@ -37,57 +32,866 @@
                 </button>
             </div>
 
-            <div class="Carousel__Container">
+            <div class="Carousel__VisualBox">
                 <div class="Carousel__Track" id="Track">
                     <div class="Carousel__Item-Active" id="Card-01">
-                        <img class="Carousel__Image" src="./assets/images/Image-01.jpg" alt="Star Wars Image">
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/HBO-Image-01.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/HBO-Image-01.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/HBO-Image-01.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/HBO-Image-01.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
                     </div>
+
                     <div class="Carousel__Item" id="Card-02">
-                        <img class="Carousel__Image" src="./assets/images/Image-02.jpg" alt="Star Wars Image">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/HBO-Image-02.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/HBO-Image-02.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/HBO-Image-02.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/HBO-Image-02.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
                     <div class="Carousel__Item" id="Card-03">
-                        <img class="Carousel__Image" src="./assets/images/Image-03.jpg" alt="Star Wars Image">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/HBO-Image-03.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/HBO-Image-03.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/HBO-Image-03.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/HBO-Image-03.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
                     <div class="Carousel__Item" id="Card-04">
-                        <img class="Carousel__Image" src="./assets/images/Image-04.jpg" alt="Star Wars Image">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/HBO-Image-04.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/HBO-Image-04.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/HBO-Image-04.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/HBO-Image-04.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
                     <div class="Carousel__Item" id="Card-05">
-                        <img class="Carousel__Image" src="./assets/images/Image-05.jpg" alt="Star Wars Image">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/HBO-Image-05.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/HBO-Image-05.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/HBO-Image-05.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/HBO-Image-05.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
                     <div class="Carousel__Item" id="Card-06">
-                        <img class="Carousel__Image" src="./assets/images/Image-06.jpg" alt="Star Wars Image">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/HBO-Image-06.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/HBO-Image-06.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/HBO-Image-06.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/HBO-Image-06.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
                     <div class="Carousel__Item" id="Card-07">
-                        <img class="Carousel__Image" src="./assets/images/Image-07.jpg" alt="Star Wars Image">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/HBO-Image-07.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/HBO-Image-07.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/HBO-Image-07.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/HBO-Image-07.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
                     <div class="Carousel__Item" id="Card-08">
-                        <img class="Carousel__Image" src="./assets/images/Image-08.jpg" alt="Star Wars Image">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/HBO-Image-08.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/HBO-Image-08.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/HBO-Image-08.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/HBO-Image-08.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
                     <div class="Carousel__Item" id="Card-09">
-                        <img class="Carousel__Image" src="./assets/images/Image-09.jpg" alt="Star Wars Image">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/HBO-Image-09.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/HBO-Image-09.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/HBO-Image-09.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/HBO-Image-09.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
                     <div class="Carousel__Item" id="Card-10">
-                        <img class="Carousel__Image" src="./assets/images/Image-10.jpg" alt="Star Wars Image">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/HBO-Image-10.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/HBO-Image-10.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/HBO-Image-10.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/HBO-Image-10.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
                     <div class="Carousel__Item" id="Card-11">
-                        <img class="Carousel__Image" src="./assets/images/Image-11.jpg" alt="Star Wars Image">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/HBO-Image-11.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/HBO-Image-11.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/HBO-Image-11.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/HBO-Image-11.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
                     <div class="Carousel__Item" id="Card-12">
-                        <img class="Carousel__Image" src="./assets/images/Image-12.jpg" alt="Star Wars Image">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/HBO-Image-12.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/HBO-Image-12.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/HBO-Image-12.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/HBO-Image-12.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
                     <div class="Carousel__Item" id="Card-13">
-                        <img class="Carousel__Image" src="./assets/images/Image-13.jpg" alt="Star Wars Image">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/HBO-Image-13.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/HBO-Image-13.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/HBO-Image-13.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/HBO-Image-13.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
                     <div class="Carousel__Item" id="Card-14">
-                        <img class="Carousel__Image" src="./assets/images/Image-14.jpg" alt="Star Wars Image">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/HBO-Image-14.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/HBO-Image-14.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/HBO-Image-14.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/HBO-Image-14.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
                     <div class="Carousel__Item" id="Card-15">
-                        <img class="Carousel__Image" src="./assets/images/Image-15.jpg" alt="Star Wars Image">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/HBO-Image-15.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/HBO-Image-15.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/HBO-Image-15.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/HBO-Image-15.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
                 </div>
             </div>
 
-            <div class="Carousel__Arrow aux">
+            <div class="Carousel__Arrow">
                 <button class="Carousel__Arrow-Next" id="Next">
                     <span class="Display">
                         This is the Next Button Container
@@ -97,10 +901,8 @@
 
         </div>
         <!-- End : Carousel -->
-        <br>
-        <br>
-        <br>
-        <!-- Begin : Carousel -->
+
+        <!-- Begin : Carousel Lego -->
         <div class="Carousel">
 
             <div class="Carousel__Arrow">
@@ -111,57 +913,866 @@
                 </button>
             </div>
 
-            <div class="Carousel__Container">
+            <div class="Carousel__VisualBox">
                 <div class="Carousel__Track" id="Track2">
-                    <div class="Carousel__Item">
-                        <img class="Carousel__Image" src="http://via.placeholder.com/300x168/0059b3/FFFFFF/?text=1" alt="Dummy Image">
+                    <div class="Carousel__Item-Active" id="Card-01">
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/Lego-Image-01.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/Lego-Image-01.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/Lego-Image-01.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/Lego-Image-01.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
                     </div>
-                    <div class="Carousel__Item">
-                        <img class="Carousel__Image" src="http://via.placeholder.com/300x168/b30059/FFFFFF/?text=2" alt="Dummy Image">
+
+                    <div class="Carousel__Item" id="Card-02">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/Lego-Image-02.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/Lego-Image-02.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/Lego-Image-02.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/Lego-Image-02.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
-                    <div class="Carousel__Item">
-                        <img class="Carousel__Image" src="http://via.placeholder.com/300x168/00b386/FFFFFF/?text=3" alt="Dummy Image">
+                    <div class="Carousel__Item" id="Card-03">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/Lego-Image-03.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/Lego-Image-03.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/Lego-Image-03.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/Lego-Image-03.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
-                    <div class="Carousel__Item">
-                        <img class="Carousel__Image" src="http://via.placeholder.com/300x168/0059b3/FFFFFF/?text=4" alt="Dummy Image">
+                    <div class="Carousel__Item" id="Card-04">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/Lego-Image-04.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/Lego-Image-04.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/Lego-Image-04.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/Lego-Image-04.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
-                    <div class="Carousel__Item">
-                        <img class="Carousel__Image" src="http://via.placeholder.com/300x168/b30059/FFFFFF/?text=5" alt="Dummy Image">
+                    <div class="Carousel__Item" id="Card-05">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/Lego-Image-05.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/Lego-Image-05.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/Lego-Image-05.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/Lego-Image-05.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
-                    <div class="Carousel__Item">
-                        <img class="Carousel__Image" src="http://via.placeholder.com/300x168/00b386/FFFFFF/?text=6" alt="Dummy Image">
+                    <div class="Carousel__Item" id="Card-06">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/Lego-Image-06.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/Lego-Image-06.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/Lego-Image-06.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/Lego-Image-06.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
-                    <div class="Carousel__Item">
-                        <img class="Carousel__Image" src="http://via.placeholder.com/300x168/0059b3/FFFFFF/?text=7" alt="Dummy Image">
+                    <div class="Carousel__Item" id="Card-07">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/Lego-Image-07.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/Lego-Image-07.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/Lego-Image-07.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/Lego-Image-07.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
-                    <div class="Carousel__Item">
-                        <img class="Carousel__Image" src="http://via.placeholder.com/300x168/b30059/FFFFFF/?text=8" alt="Dummy Image">
+                    <div class="Carousel__Item" id="Card-08">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/Lego-Image-08.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/Lego-Image-08.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/Lego-Image-08.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/Lego-Image-08.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
-                    <div class="Carousel__Item">
-                        <img class="Carousel__Image" src="http://via.placeholder.com/300x168/00b386/FFFFFF/?text=9" alt="Dummy Image">
+                    <div class="Carousel__Item" id="Card-09">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/Lego-Image-09.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/Lego-Image-09.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/Lego-Image-09.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/Lego-Image-09.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
-                    <div class="Carousel__Item">
-                        <img class="Carousel__Image" src="http://via.placeholder.com/300x168/0059b3/FFFFFF/?text=10" alt="Dummy Image">
+                    <div class="Carousel__Item" id="Card-10">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/Lego-Image-10.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/Lego-Image-10.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/Lego-Image-10.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/Lego-Image-10.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
-                    <div class="Carousel__Item">
-                        <img class="Carousel__Image" src="http://via.placeholder.com/300x168/b30059/FFFFFF/?text=11" alt="Dummy Image">
+                    <div class="Carousel__Item" id="Card-11">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/Lego-Image-11.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/Lego-Image-11.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/Lego-Image-11.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/Lego-Image-11.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
-                    <div class="Carousel__Item">
-                        <img class="Carousel__Image" src="http://via.placeholder.com/300x168/00b386/FFFFFF/?text=12" alt="Dummy Image">
+                    <div class="Carousel__Item" id="Card-12">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/Lego-Image-12.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/Lego-Image-12.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/Lego-Image-12.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/Lego-Image-12.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
-                    <div class="Carousel__Item">
-                        <img class="Carousel__Image" src="http://via.placeholder.com/300x168/0059b3/FFFFFF/?text=13" alt="Dummy Image">
+                    <div class="Carousel__Item" id="Card-13">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/Lego-Image-13.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/Lego-Image-13.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/Lego-Image-13.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/Lego-Image-13.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
-                    <div class="Carousel__Item">
-                        <img class="Carousel__Image" src="http://via.placeholder.com/300x168/b30059/FFFFFF/?text=14" alt="Dummy Image">
+                    <div class="Carousel__Item" id="Card-14">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/Lego-Image-14.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/Lego-Image-14.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/Lego-Image-14.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/Lego-Image-14.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
-                    <div class="Carousel__Item">
-                        <img class="Carousel__Image" src="http://via.placeholder.com/300x168/00b386/FFFFFF/?text=15" alt="Dummy Image">
+                    <div class="Carousel__Item" id="Card-15">
+
+                        <div class="Items__ItemTypeA">
+                            <div class="Items__ItemTypeAThumbnail">
+                                <div class="Items__ItemTypeAImageContainer">
+                                    <picture>
+                                        <source media="(min-width:0px) and (max-width:414px)" srcset="./assets/images/Lego-Image-15.jpg">
+                                        <source media="(min-width:415px) and (max-width:768px)" srcset="./assets/images/Lego-Image-15.jpg">
+                                        <source media="(min-width:769px)" srcset="./assets/images/Lego-Image-15.jpg">
+                                        <img class="Items__ItemTypeAImage" src="./assets/images/Lego-Image-15.jpg" alt="Star Wars Image">
+                                    </picture>
+                                </div>
+                                <div class="Items__ItemTypeAVideoContainer">
+                                    <div class="Items__ItemTypeAVideo">
+                                    </div>
+                                </div>
+                                <div class="Items__ItemTypeAIconContainer">
+                                    <div class="Items__ItemTypeAIcon>
+                                        <span class="Display">Display</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Items__ItemTypeACaption">
+                                <div class="Items__ItemTypeATitleContainer">
+                                    <h3 class="Items__ItemTypeATitle">
+                                        Mira cómo luce Miss España sin maquillaje
+                                    </h3>
+                                </div>
+                                <div class="Items__ItemTypeADescriptionContainer">
+                                    <p class="Items__ItemTypeADescription">
+                                        En la red circula una imagen de Ángela Ponce, Miss España, luciendo su rostro al natural
+                                    </p>
+                                </div>
+                                <div class="Items__ItemTypeATimeContainer">
+                                    <time class="Items__ItemTypeATime">
+                                        11:11
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeADateContainer">
+                                    <time class="Items__ItemTypeADate">
+                                        18 de Enero
+                                    </time>
+                                </div>
+                                <div class="Items__ItemTypeAAutorContainer">
+                                    <span class="Items__ItemTypeAAutor">
+                                        Alan Mena
+                                    </span>
+                                </div>
+                                <div class="Items__ItemTypeALabelContainer">
+                                    <span class="Items__ItemTypeALabel">
+                                        Ver Contenido
+                                    </span>
+                                </div>
+                            </div>
+                        </div> <!-- End of Item Type A -->
+                        
                     </div>
                 </div>
             </div>
 
-            <div class="Carousel__Arrow aux">
+            <div class="Carousel__Arrow">
                 <button class="Carousel__Arrow-Next" id="Next2">
                     <span class="Display">
                         This is the Next Button Container
