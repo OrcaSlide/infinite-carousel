@@ -411,5 +411,11 @@ body {
 .Items__ItemTypeAAutorContainer,
 .Items__ItemTypeALabelContainer {
     padding: 0px 20px 10px;
-
 }
+
+@media screen and (min-width:0) and (max-width:414px){
+    .Carousel__Arrow {
+        display: none;
+    }
+}
+
