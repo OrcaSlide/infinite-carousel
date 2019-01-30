@@ -135,7 +135,6 @@ class CircularCarousel {
             const { carouselTrack, swipe } = this.config;
             const TRACK = carouselTrack.parentNode || null;
             if (TRACK) {
-                if (DEVICE === "phone") this.hiddenArrow();
                 TRACK.addEventListener("touchstart", (action) => {
                     const TOUCH = Utils.existFields(action, "touches.0", null);
                     if (TOUCH) {
@@ -325,8 +324,8 @@ class CircularCarousel {
                 endY: 0,
                 min_x: 20,
                 max_x: 20,
-                min_y: 400,
-                max_y: 400,
+                min_y: 40,
+                max_y: 50
             },
         };
         this.config = Object.assign(DEFAULT, config);
@@ -339,7 +338,8 @@ class Auxiliar {
     static set init(config) {
         const CONFIG = JSON.stringify(config);
         const NEW_CONFIG = JSON.parse(CONFIG);
-        return new CircularCarousel(NEW_CONFIG);
+        const TEST = new CircularCarousel(NEW_CONFIG);
+        console.log(TEST.config);
     }
 }
 
