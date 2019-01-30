@@ -25,7 +25,9 @@ class CircularCarousel {
         if ($CONTAINER) {
             const CHILDREN = $CONTAINER.children;
             const ITEMS = CHILDREN.length;
-            const ITEM_SIZE = CHILDREN[0].offsetWidth;
+            const FIRS_CHILD = CHILDREN[0];
+            const GET_STYLES = window.getComputedStyle(FIRS_CHILD);
+            const ITEM_SIZE = FIRS_CHILD.offsetWidth + parseInt(GET_STYLES.marginRight, 10);
             const TRACK_SIZE = $CONTAINER.offsetWidth;
             const IS_ACTIVE = (ITEM_SIZE * ITEMS) > TRACK_SIZE;
             if (IS_ACTIVE) {
