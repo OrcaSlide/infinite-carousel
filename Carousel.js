@@ -325,8 +325,8 @@ class CircularCarousel {
                 endY: 0,
                 min_x: 20,
                 max_x: 20,
-                min_y: 400,
-                max_y: 400,
+                min_y: 80,
+                max_y: 80,
             },
         };
         this.config = Object.assign(DEFAULT, config);
