@@ -151,6 +151,7 @@ class CircularCarousel {
                         swipe.endX = TOUCH.screenX;
                         swipe.endY = TOUCH.screenY;
                         swipe.direction = this.getDirecctionSlide();
+                        document.querySelector("body").style.overflow = "hidden";
                     }
                 }, false);
 
@@ -160,6 +161,7 @@ class CircularCarousel {
                             const IS_LEFT = (swipe.direction === "left");
                             this.actionArrow(IS_LEFT);
                         }
+                        document.querySelector("body").style.overflow = "";
                         swipe.direction = "";
                     }
                 }, false);
