@@ -154,8 +154,10 @@ class CircularCarousel {
 
                 TRACK.addEventListener("touchend", () => {
                     if (swipe.direction !== "") {
-                        const IS_LEFT = (swipe.direction === "left");
-                        this.actionArrow(IS_LEFT);
+                        if (swipe.direction === "left" || swipe.direction === "right") {
+                            const IS_LEFT = (swipe.direction === "left");
+                            this.actionArrow(IS_LEFT);
+                        }
                         swipe.direction = "";
                     }
                 }, false);
@@ -324,8 +326,8 @@ class CircularCarousel {
                 endY: 0,
                 min_x: 20,
                 max_x: 20,
-                min_y: 40,
-                max_y: 50
+                min_y: 80,
+                max_y: 80
             },
         };
         this.config = Object.assign(DEFAULT, config);
