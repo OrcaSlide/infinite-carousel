@@ -20,7 +20,7 @@ class CircularCarousel {
 
         this.getElementDom(arrowNext, "arrowNext");
         this.getElementDom(arrowPrevious, "arrowPrevious");
-        const $CONTAINER = this.getElementDom(carouselTrack, "carouselTrack");
+        const $CONTAINER = this.getElementDom(carouselTrack, "visualBox");
 
         if ($CONTAINER) {
             const CHILDREN = $CONTAINER.children;
@@ -28,12 +28,12 @@ class CircularCarousel {
             const FIRS_CHILD = CHILDREN[0];
             const GET_STYLES = window.getComputedStyle(FIRS_CHILD);
             const ITEM_SIZE = FIRS_CHILD.offsetWidth + parseInt(GET_STYLES.marginRight, 10);
-            const TRACK_SIZE = $CONTAINER.offsetWidth;
-            const IS_ACTIVE = (ITEM_SIZE * ITEMS) > TRACK_SIZE;
+            const VISUAL_BOX_SIZE = $CONTAINER.offsetWidth;
+            const IS_ACTIVE = (ITEM_SIZE * ITEMS) > VISUAL_BOX_SIZE;
             if (IS_ACTIVE) {
                 this.config.items = ITEMS;
                 this.config.itemSize = ITEM_SIZE;
-                this.config.trackSize = TRACK_SIZE;
+                this.config.visualBoxSize = VISUAL_BOX_SIZE;
                 this.config.success = IS_ACTIVE;
                 this.buildCarousel();
             } else {
@@ -48,7 +48,7 @@ class CircularCarousel {
      * @return {void}
      */
     activeItem() {
-        const { carouselTrack: $CONTAINER, pin } = this.config;
+        const { visualBox: $CONTAINER, pin } = this.config;
         if (pin !== null) {
             const ITEMS = [...$CONTAINER.children];
             ITEMS.forEach((item, index) => {
@@ -106,9 +106,9 @@ class CircularCarousel {
     buildCarousel() {
         const {
             arrowNext, arrowPrevious, itemSize,
-            trackSize, items, moveItems,
+            visualBoxSize, items, moveItems,
         } = this.config;
-        const CLONE = Math.floor(trackSize / itemSize);
+        const CLONE = Math.floor(visualBoxSize / itemSize);
         const IS_CLONE = this.cloneItem(CLONE);
         if (IS_CLONE) {
             const PIXELS = itemSize * CLONE;
@@ -134,8 +134,8 @@ class CircularCarousel {
         const DEVICE = Utils.isMobile;
 
         if (DEVICE !== "desktop") {
-            const { carouselTrack, swipe } = this.config;
-            const TRACK = carouselTrack.parentNode || null;
+            const { visualBox, swipe } = this.config;
+            const TRACK = visualBox.parentNode || null;
             if (TRACK) {
                 TRACK.addEventListener("touchstart", (action) => {
                     const TOUCH = Utils.existFields(action, "touches.0", null);
@@ -182,7 +182,7 @@ class CircularCarousel {
     cloneItem(limit) {
         let response = false;
         try {
-            const { carouselTrack: $CONTAINER, items } = this.config;
+            const { visualBox: $CONTAINER, items } = this.config;
             const CHILDREN = [...$CONTAINER.children];
             const ITEMS = Object.entries({
                 bottom: CHILDREN.slice(0, limit),
@@ -286,7 +286,7 @@ class CircularCarousel {
      */
     translateCarousel(live = false) {
         const {
-            carouselTrack: $CONTAINER,
+            visualBox: $CONTAINER,
             pixels, endPoint, startPoint, time,
         } = this.config;
         const TRANSFORM = `transform: translate3d(-${pixels}px, 0px, 0px);`;
@@ -316,7 +316,7 @@ class CircularCarousel {
         const DEFAULT = {
             arrowNext: "ArrowNext",
             arrowPrevious: "ArrowPrevious",
-            carouselTrack: "CarouselTrack",
+            visualBox: "CarouselTrack",
             moveItems: 0,
             time: 500,
             pin: null,
