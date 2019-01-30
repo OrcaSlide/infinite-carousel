@@ -400,7 +400,8 @@ body {
 
 .Carousel__Item,
 .Carousel__Item-Active {
-    margin-left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .Items__ItemTypeATitleContainer,
