@@ -382,6 +382,11 @@ body {
     transform: translate3d(0, 0, 0);
 }
 
+.Carousel__Item-Active,
+.Carousel__Item {
+    padding-right: 20px;
+}
+
 .Carousel__Item-Active {
     opacity: .3;
 }
@@ -393,14 +398,9 @@ body {
 
 .Items__ItemTypeA {
     width: 300px;
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
     background: #535b5f;
-}
-
-.Carousel__Item,
-.Carousel__Item-Active {
-    margin-left: 20px;
 }
 
 .Items__ItemTypeATitleContainer,
@@ -411,4 +411,11 @@ body {
 .Items__ItemTypeALabelContainer {
     padding: 0px 20px 10px;
 
+}
+
+@media (max-width: 768px) {
+    .Carousel__Arrow-Previous,
+    .Carousel__Arrow-Next {
+        display: none;
+    }
 }
