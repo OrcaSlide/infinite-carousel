@@ -3,8 +3,7 @@
  *
  * @category UI Carousel.
  * @package Carousel.
- * @author Televisa Digital.
- * @author Jorge Mendez Ortega <jorge.mendez@televisatim.com>
+ * @author Jorge Mendez Ortega <jorge.mendez.ortega@gmail.com>
 */
 class CircularCarousel {
     /**

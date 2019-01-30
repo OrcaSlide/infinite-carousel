@@ -309,6 +309,7 @@ template {
 body {
     background: #333333;
     color: #dadaca;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .Display {
@@ -340,37 +341,27 @@ body {
 }
 
 .Carousel {
-    background-color: black;
-    margin: auto;
+    margin: 0px auto 30px;
     max-width: 1140px;
     position: relative;
     display: flex;
 }
 
 .Carousel__Arrow {
-    background: red;
     display: flex;
     width: 50px;
     align-items: center;
 }
 
-/* .Carousel__Arrow {
-    margin: 0;
-    width: 50px;
-    position: absolute;
-    z-index: 1;
-    height: 100%;
-    display: flex;
-    align-items: center;
-} */
-
 .Carousel__Arrow-Previous,
 .Carousel__Arrow-Next {
-    background-color: #600080;
+    background-color: #d861cf;
     color: white;
     height: 50px;
     width: 50px;
     border: none;
+    border-radius: 50%;
+    outline: none;
 }
 
 .Carousel__VisualBox {
@@ -391,11 +382,6 @@ body {
     transform: translate3d(0, 0, 0);
 }
 
-.Carousel__Item,
-.Carousel__Item-Active {
-    background-color: red;
-}
-
 .Carousel__Item-Active {
     opacity: .3;
 }
@@ -407,4 +393,22 @@ body {
 
 .Items__ItemTypeA {
     width: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #535b5f;
+}
+
+.Carousel__Item,
+.Carousel__Item-Active {
+    margin-left: 20px;
+}
+
+.Items__ItemTypeATitleContainer,
+.Items__ItemTypeADescriptionContainer,
+.Items__ItemTypeATimeContainer,
+.Items__ItemTypeADateContainer,
+.Items__ItemTypeAAutorContainer,
+.Items__ItemTypeALabelContainer {
+    padding: 0px 20px 10px;
+
 }
