@@ -307,7 +307,7 @@ template {
 /* Orca Circle Carousel Styles */
 
 body {
-    background: #333333;
+    background: #342344;
     color: #dadaca;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -321,23 +321,23 @@ body {
     text-align: center;
     text-transform: uppercase;
     font-size: 4em;
-    margin: 30px 0px 10px 0px;
+    margin: 30px 0px 30px 0px;
 }
 
 .Credits {
     font-family: sans-serif;
-    font-size: 1em;
+    font-size: .8em;
     text-align: center;
     margin: 0px 0px 5px 0px;
-    color: #5d5d5d;
+    color: #6a4092;
 }
 
 .Version {
     font-family: sans-serif;
-    font-size: .8em;
+    font-size: .6em;
     text-align: center;
     margin: 0px 0px 50px 0px;
-    color: #5d5d5d;
+    color: #6a4092;
 }
 
 .Carousel {
@@ -364,7 +364,7 @@ body {
 
 .Carousel__Arrow-Previous:hover,
 .Carousel__Arrow-Next:hover {
-    opacity: .5;
+    opacity: .7;
 }
 
 .Carousel__Arrow-Previous {
@@ -412,7 +412,7 @@ body {
     content: 'You are watching';
     width: 100%;
     height: 100%;
-    background: rgba(15, 162, 100, 0.8);
+    background: rgba(15, 162, 100, 0.9);
     position: absolute;
     border-radius: 10px;
     display: flex;
@@ -430,15 +430,15 @@ body {
     width: 300px;
     border-radius: 10px;
     overflow: hidden;
-    background: #535b5f;
+    background: #443b67;
     display: block;
     text-decoration: none;
-    color: #bee4d9;
+    color: #b4abd8;
     transition: opacity .2s ease-in-out;
 }
 
 .Items__ItemTypeA:hover {
-    opacity: .7;
+    opacity: .8;
 }
 
 .Items__ItemTypeATitleContainer,
@@ -447,7 +447,8 @@ body {
 .Items__ItemTypeADateContainer,
 .Items__ItemTypeAAutorContainer,
 .Items__ItemTypeALabelContainer {
-    padding: 0px 20px 10px;
+    padding: 0px 20px;
+    box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
@@ -455,4 +456,72 @@ body {
     .Carousel__Arrow-Next {
         display: none;
     }
+}
+
+.Items__ItemTypeATitle {
+    margin: 0px;
+}
+
+.Items__ItemTypeADescription {
+    margin: 0px;
+}
+
+.Items__ItemTypeATitleContainer {
+    margin: 15px 0px;
+}
+
+.Items__ItemTypeADescriptionContainer {
+    margin: 0px 0px 15px 0px;
+}
+
+.Items__ItemTypeALabelContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12px 0px;
+
+}
+
+.Items__ItemTypeALabel {
+    display: block;
+    background: #62f1b5;
+    padding: 15px;
+    border-radius: 10px;
+    color: rgba(15, 121, 77, 0.9);
+    text-transform: uppercase;
+    font-size: 10px;
+
+}
+
+.Items__ItemTypeAAutor {
+    font-size: 10px;
+    text-align: right;
+    display: block;
+
+}
+
+.Items__ItemTypeADate {
+    font-size: 10px;
+    text-align: left;
+    display: block;
+
+}
+
+.Items__ItemTypeADateContainer {
+    width: 50%;
+    float: left;
+
+}
+
+.Items__ItemTypeAAutorContainer {
+    width: 50%;
+    float: right;
+
+}
+
+.Items__ItemTypeADateContainer,
+.Items__ItemTypeAAutorContainer {
+    margin: 0px 0px 20px 0px;
+
+
 }
