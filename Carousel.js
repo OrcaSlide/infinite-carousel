@@ -37,7 +37,9 @@ class CircularCarousel {
                 this.config.success = IS_ACTIVE;
                 this.buildCarousel();
             } else {
+                $CONTAINER.dataset.active = 0;
                 this.hiddenArrow();
+                this.activeItem();
             }
         }
     }
@@ -89,10 +91,19 @@ class CircularCarousel {
      */
     actionArrow(isNext = false) {
         if (this.config.isActive) {
-            const { itemSize, moveItems, pixels } = this.config;
+            const {
+                itemSize, moveItems,
+                pixels, endPoint,
+            } = this.config;
             const MOVE_TO = (itemSize * moveItems);
             const PIXELS = (isNext) ? (pixels + MOVE_TO) : (pixels - MOVE_TO);
-            this.config.pixels = PIXELS;
+            let movePixels = PIXELS;
+            if (PIXELS > endPoint) {
+                movePixels = endPoint;
+            } else if (PIXELS < 0) {
+                movePixels = 0;
+            }
+            this.config.pixels = movePixels;
             this.config.isActive = false;
             this.translateCarousel(true);
         }
@@ -331,7 +342,7 @@ class CircularCarousel {
                 min_x: 20,
                 max_x: 20,
                 min_y: 80,
-                max_y: 80
+                max_y: 80,
             },
         };
         this.config = Object.assign(DEFAULT, config);
