@@ -359,9 +359,3 @@ class Auxiliar {
         console.log(TEST.config);
     }
 }
-
-
-function demo(id) {
-    const ID = `#${id}`;
-    document.querySelector(ID).style.opacity = ".5";
-}
