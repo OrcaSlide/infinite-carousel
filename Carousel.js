@@ -356,12 +356,5 @@ class Auxiliar {
         const CONFIG = JSON.stringify(config);
         const NEW_CONFIG = JSON.parse(CONFIG);
         const TEST = new CircularCarousel(NEW_CONFIG);
-        console.log(TEST.config);
     }
-}
-
-
-function demo(id) {
-    const ID = `#${id}`;
-    document.querySelector(ID).style.opacity = ".5";
 }
