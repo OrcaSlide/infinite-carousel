@@ -30,4 +30,19 @@ class Utils {
         }
         return request;
     }
+
+    static createItem(limit, assets, name, date, alt, id = "card", isActive = false) {
+        let item = "";
+        for (let i = 1; i <= limit; i += 1) {
+            const ID = (i < 10) ? `0${i}` : i;
+            const ACTIVE = (isActive && i === 1) ? "-Active" : "";
+            item += ITEMS.replace(/{ID}/g, `${id}-${ID}`)
+                .replace(/{ACTIVE}/g, ACTIVE)
+                .replace(/{ASSETS}/g, `${assets}-${ID}`)
+                .replace(/{ALT}/g, `${alt}-${ID}`);
+        }
+        item = item.replace(/{NAME}/g, name)
+            .replace(/{DATE}/g, date);
+        return item;
+    }
 }
