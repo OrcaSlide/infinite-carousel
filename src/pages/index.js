@@ -2,13 +2,21 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
+import Carousel from "../components/Carousel";
 import Image from "../components/image"
-import SEO from "../components/seo"
+import SEO from "../components/seo";
 
 const IndexPage = () => (
   <Layout>
 
-
+      <Carousel
+        assets="./assets/images/GOT/HBO-Image"
+        items={15}
+        idGral="Lego"
+        name="Jmendez"
+        date="12 de Febrero"
+        isActive
+    />
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
