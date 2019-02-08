@@ -46,6 +46,32 @@
         <div class="Carousel">
 
             <div class="Carousel__Arrow">
+                <button class="Carousel__Arrow-Previous" id="Previous0">
+                    <span class="Display">
+                        This is the Previous Button Container
+                    </span>
+                </button>
+            </div>
+
+            <div class="Carousel__ViewBox">
+                <div class="Carousel__Track" id="Track0"></div>
+            </div>
+
+            <div class="Carousel__Arrow">
+                <button class="Carousel__Arrow-Next" id="Next0">
+                    <span class="Display">
+                        This is the Next Button Container
+                    </span>
+                </button>
+            </div>
+
+        </div>
+        <!-- End : Carousel -->
+
+        <!-- Begin : Carousel Lego -->
+        <div class="Carousel">
+
+            <div class="Carousel__Arrow">
                 <button class="Carousel__Arrow-Previous" id="Previous1">
                     <span class="Display">
                         This is the Previous Button Container
@@ -121,6 +147,13 @@
                         "Star Wars Image", "Lego",
                         true
                     );
+                    document.querySelector("#Track0").innerHTML = Utils.createItem(
+                        4, 
+                        "./assets/images/HBO-Image",
+                        "Dumny", "19 de Enero",
+                        "Star Wars Image", "Lego",
+                        true
+                    );
                     document.querySelector("#Track1").innerHTML = Utils.createItem(
                         15, 
                         "./assets/images/Lego-Image",
@@ -143,6 +176,15 @@
                         arrowNext: "#Next",
                         arrowPrevious: "#Previous",
                         carouselTrack: "#Track",
+                        pin: {
+                            disabled: "Carousel__Item",
+                            enabled: "Carousel__Item-Active"
+                        },
+                    };
+                    Auxiliar.init = {
+                        arrowNext: "#Next0",
+                        arrowPrevious: "#Previous0",
+                        carouselTrack: "#Track0",
                         pin: {
                             disabled: "Carousel__Item",
                             enabled: "Carousel__Item-Active"
