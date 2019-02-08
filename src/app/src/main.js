@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Welcome from "./components/welcome";
+import Carousel from "./components/Carousel/Carousel";
 import "./stylesheets/Main.scss";
 
 ReactDOM.hydrate(
-    <Welcome />,
+    <Carousel />,
     document.getElementById("app"),
 );
