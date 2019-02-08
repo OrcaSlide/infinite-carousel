@@ -146,6 +146,8 @@ class CircularCarousel {
 
         if (DEVICE !== "desktop") {
             const { visualBox, swipe } = this.config;
+            const PHONE = navigator.userAgent.toLowerCase();
+            const IS_ANDROID = PHONE.indexOf("android");
             const TRACK = visualBox.parentNode || null;
             if (TRACK) {
                 TRACK.addEventListener("touchstart", (action) => {
@@ -162,7 +164,9 @@ class CircularCarousel {
                         swipe.endX = TOUCH.screenX;
                         swipe.endY = TOUCH.screenY;
                         swipe.direction = this.getDirecctionSlide();
-                        document.querySelector("body").style.overflow = "hidden";
+                        if (IS_ANDROID < 0) {
+                            document.querySelector("body").style.overflow = "hidden";
+                        }
                     }
                 }, false);
 
@@ -172,7 +176,9 @@ class CircularCarousel {
                             const IS_LEFT = (swipe.direction === "left");
                             this.actionArrow(IS_LEFT);
                         }
-                        document.querySelector("body").style.overflow = "";
+                        if (IS_ANDROID < 0) {
+                            document.querySelector("body").style.overflow = "";
+                        }
                         swipe.direction = "";
                     }
                 }, false);
