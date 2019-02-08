@@ -148,7 +148,7 @@ class CircularCarousel {
             const { visualBox, swipe } = this.config;
             const PHONE = navigator.userAgent.toLowerCase();
             const IS_ANDROID = PHONE.indexOf("android");
-            console.log(IS_ANDROID);
+            alert(IS_ANDROID);
             const TRACK = visualBox.parentNode || null;
             if (TRACK) {
                 TRACK.addEventListener("touchstart", (action) => {
