@@ -1,0 +1,8 @@
+#=======================================================#
+# Reglas para ignorar archivos o carpetas               #
+#=======================================================#
+/node_modules
+/dll
+# /src/app/assets/dll
+# /dist
+yarn.*

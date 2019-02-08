@@ -1,0 +1,7 @@
+{
+    "port": 3000,
+    "views": "./app/views/",
+    "assets": "./app/assets/",
+    "stylesheets": "./app/stylesheets/",
+    "domain": "localhost"
+}

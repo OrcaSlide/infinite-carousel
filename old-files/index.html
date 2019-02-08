@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es, en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./favicon.ico?v=3" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <title>.: Circle Carousel :.</title>
+</head>
+    <body>
+        <h1 class="Title">
+            Circle Carousels
+        </h1>
+
+        <!-- Begin : Carousel Lego -->
+        <div class="Carousel">
+
+            <div class="Carousel__Arrow">
+                <button class="Carousel__Arrow-Previous" id="Previous">
+                    <span class="Display">
+                        This is the Previous Button Container
+                    </span>
+                </button>
+            </div>
+
+            <div class="Carousel__ViewBox">
+                <div class="Carousel__Track" id="Track"></div>
+            </div>
+
+            <div class="Carousel__Arrow">
+                <button class="Carousel__Arrow-Next" id="Next">
+                    <span class="Display">
+                        This is the Next Button Container
+                    </span>
+                </button>
+            </div>
+
+        </div>
+        <!-- End : Carousel -->
+
+        <!-- Begin : Carousel Lego -->
+        <div class="Carousel">
+
+            <div class="Carousel__Arrow">
+                <button class="Carousel__Arrow-Previous" id="Previous1">
+                    <span class="Display">
+                        This is the Previous Button Container
+                    </span>
+                </button>
+            </div>
+
+            <div class="Carousel__ViewBox">
+                <div class="Carousel__Track" id="Track1"></div>
+            </div>
+
+            <div class="Carousel__Arrow">
+                <button class="Carousel__Arrow-Next" id="Next1">
+                    <span class="Display">
+                        This is the Next Button Container
+                    </span>
+                </button>
+            </div>
+
+        </div>
+        <!-- End : Carousel -->
+        
+        <!-- Begin : Carousel HBO -->
+        <div class="Carousel">
+
+            <div class="Carousel__Arrow">
+                <button class="Carousel__Arrow-Previous" id="Previous2">
+                    <span class="Display">
+                        This is the Previous Button Container
+                    </span>
+                </button>
+            </div>
+
+            <div class="Carousel__ViewBox">
+                <div class="Carousel__Track" id="Track2"></div>
+            </div>
+
+            <div class="Carousel__Arrow">
+                <button class="Carousel__Arrow-Next" id="Next2">
+                    <span class="Display">
+                        This is the Next Button Container
+                    </span>
+                </button>
+            </div>
+
+        </div>
+        <!-- End : Carousel -->
+
+        <!-- Credits -->
+
+
+        <h3 class="Credits">
+            Con 💜de Neza y Tlatelolco para el 🌎
+        </h3>
+        <h3 class="Credits">
+            by Jorge Méndez 🤟(Konami12) & Alan Mena 🦄(Kolibri)
+        </h3>
+        <h2 class="Version">
+            January 2019 v0.8.0 
+        </h2>
+
+        <!-- End of Credits -->
+        <script type="text/javascript" src="./Item.js"></script>
+        <script type="text/javascript" src="./Utils.js"></script>
+        <script type="text/javascript" src="./Carousel.js"></script>
+        <script type="text/javascript">
+            document.onreadystatechange = () => {
+                if (document.readyState === "interactive") {
+                    document.querySelector("#Track").innerHTML = Utils.createItem(
+                        3, 
+                        "./assets/images/Lego-Image",
+                        "Dante Santiago", "19 de Septiembre",
+                        "Star Wars Image", "Lego",
+                        true
+                    );
+                    document.querySelector("#Track1").innerHTML = Utils.createItem(
+                        15, 
+                        "./assets/images/Lego-Image",
+                        "Jorge Méndez", "12 de Febrero",
+                        "Star Wars Image", "CardLego",
+                        true
+                    );
+                    document.querySelector("#Track2").innerHTML = Utils.createItem(
+                        15,
+                        "./assets/images/HBO-Image",
+                        "Alan Mena",
+                        "18 de Enero",
+                        "Game of Thrones",
+                        "HBO",
+                        true
+                    );
+                } else if (document.readyState === "complete") {
+                    console.time("CircularCarousel");
+                    Auxiliar.init = {
+                        arrowNext: "#Next",
+                        arrowPrevious: "#Previous",
+                        carouselTrack: "#Track",
+                        pin: {
+                            disabled: "Carousel__Item",
+                            enabled: "Carousel__Item-Active"
+                        },
+                    };
+                    Auxiliar.init = {
+                        arrowNext: "#Next1",
+                        arrowPrevious: "#Previous1",
+                        carouselTrack: "#Track1",
+                        pin: {
+                            disabled: "Carousel__Item",
+                            enabled: "Carousel__Item-Active"
+                        },
+                    };
+
+                    Auxiliar.init = {
+                        arrowNext: "#Next2",
+                        arrowPrevious: "#Previous2",
+                        carouselTrack: "#Track2",
+                        pin: {
+                            disabled: "Carousel__Item",
+                            enabled: "Carousel__Item-Active"
+                        },
+                    };
+                    console.timeEnd("CircularCarousel");
+                }
+            }
+        </script>
+    </body>
+</html>

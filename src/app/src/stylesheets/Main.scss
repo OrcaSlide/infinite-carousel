@@ -1,0 +1,15 @@
+// Main File Sass
+
+// Google Font
+
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative');
+
+body {
+    background: #4a4c4e;
+    font-family: 'Cinzel Decorative', cursive;
+    color: #353638;
+}
+
+// Call to Components
+
+@import './components/Components';
