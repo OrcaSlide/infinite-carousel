@@ -8,8 +8,7 @@ import SEO from "../components/seo";
 
 const IndexPage = () => (
   <Layout>
-
-      <Carousel
+    <Carousel
         assets="./assets/images/GOT/HBO-Image"
         items={15}
         idGral="Lego"

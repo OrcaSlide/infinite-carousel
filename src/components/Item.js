@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Image from "../components/image"
 
 const Item = (props) => {
     const {
