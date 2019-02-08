@@ -345,6 +345,7 @@ body {
     max-width: 1140px;
     position: relative;
     display: flex;
+    justify-content: center;
 }
 
 .Carousel__Arrow {
@@ -405,7 +406,7 @@ body {
 .Carousel__Item {
     margin-right: 20px;
     position: relative;
-    
+
 }
 
 .Carousel__Item-Active:before {
