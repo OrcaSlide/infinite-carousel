@@ -340,6 +340,11 @@ body {
     color: #6a4092;
 }
 
+.Description {
+    color: red;
+
+}
+
 .Carousel {
     margin: 0px auto 30px;
     max-width: 1140px;
