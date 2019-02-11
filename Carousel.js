@@ -189,6 +189,8 @@ class CircularCarousel {
                 console.groupEnd();
                 /* eslint-enable */
             }
+        } else {
+            this.hiddenArrow(true);
         }
     }
 
@@ -288,13 +290,15 @@ class CircularCarousel {
      *
      * @return {Void}
      */
-    hiddenArrow() {
+    hiddenArrow(show = false) {
         const {
             arrowNext: NEXT,
             arrowPrevious: PREVIOUS,
+            display,
         } = this.config;
-        NEXT.parentNode.style.display = "none";
-        PREVIOUS.parentNode.style.display = "none";
+        const DISPLAY = (!show) ? "none" : display;
+        NEXT.parentNode.style.display = DISPLAY;
+        PREVIOUS.parentNode.style.display = DISPLAY;
     }
 
     /**
@@ -336,6 +340,7 @@ class CircularCarousel {
             arrowNext: "ArrowNext",
             arrowPrevious: "ArrowPrevious",
             visualBox: "CarouselTrack",
+            display: "flex",
             moveItems: 0,
             time: 500,
             pin: null,
