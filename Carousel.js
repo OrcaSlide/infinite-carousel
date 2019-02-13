@@ -147,14 +147,17 @@ class CircularCarousel {
      */
     buildSwipeCarousel() {
         const DEVICE = Utils.isMobile;
-        const { visualBox, scroll } = this.config;
-        const TRACK = visualBox.parentNode || null
+        const { visualBox, scroll, pixels } = this.config;
+        const TRACK = visualBox.parentNode || null;
         window.track = TRACK;
         console.log(this.config);
         TRACK.addEventListener("scroll", () => {
             const SCROLL = TRACK.scrollLeft;
             if (SCROLL >= scroll) {
-                TRACK.scrollLeft = 0;
+                TRACK.scrollLeft = pixels;
+            }
+            if (SCROLL === 0) {
+                TRACK.scrollLeft = scroll - pixels;
             }
         });
 
@@ -326,17 +329,23 @@ class CircularCarousel {
             visualBox: $CONTAINER,
             pixels, endPoint, startPoint, time,
         } = this.config;
-        const TRANSFORM = `transform: translate3d(-${pixels}px, 0px, 0px);`;
-        const TRANSITION = `transition:transform ${time}ms ease 0s`;
-        const STYLE = TRANSFORM + ((live) ? TRANSITION : "");
-        $CONTAINER.setAttribute("style", STYLE);
-        setTimeout(() => {
-            if (endPoint === pixels || pixels === 0) {
-                this.config.pixels = (pixels === 0) ? (endPoint - startPoint) : startPoint;
-                this.translateCarousel();
-            }
-            this.config.isActive = true;
-        }, time);
+        const DEVICE = Utils.isMobile;
+        if (DEVICE === "desktop") {
+            const TRANSFORM = `transform: translate3d(-${pixels}px, 0px, 0px);`;
+            const TRANSITION = `transition:transform ${time}ms ease 0s`;
+            const STYLE = TRANSFORM + ((live) ? TRANSITION : "");
+            $CONTAINER.setAttribute("style", STYLE);
+            setTimeout(() => {
+                if (endPoint === pixels || pixels === 0) {
+                    this.config.pixels = (pixels === 0) ? (endPoint - startPoint) : startPoint;
+                    this.translateCarousel();
+                }
+                this.config.isActive = true;
+            }, time);
+        } else {
+            const TRACK = $CONTAINER.parentNode || null;
+            TRACK.scrollLeft = pixels;
+        }
     }
 
     /* =========================================== */
