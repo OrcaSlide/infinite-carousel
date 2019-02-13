@@ -27,8 +27,7 @@ class CircularCarousel {
             const ITEMS = CHILDREN.length;
             const FIRS_CHILD = CHILDREN[0];
             const GET_STYLES = window.getComputedStyle(FIRS_CHILD);
-            const MARGIN_RIGHT = parseInt(GET_STYLES.marginRight, 10);
-            const ITEM_SIZE = FIRS_CHILD.offsetWidth + parseInt(MARGIN_RIGHT, 10);
+            const ITEM_SIZE = FIRS_CHILD.offsetWidth + parseInt(GET_STYLES.marginRight, 10);
             const VISUAL_BOX_SIZE = $CONTAINER.offsetWidth;
             const IS_ACTIVE = (ITEM_SIZE * ITEMS) > VISUAL_BOX_SIZE;
             if (IS_ACTIVE) {
@@ -36,7 +35,6 @@ class CircularCarousel {
                 this.config.itemSize = ITEM_SIZE;
                 this.config.visualBoxSize = VISUAL_BOX_SIZE;
                 this.config.success = IS_ACTIVE;
-                this.config.scroll = MARGIN_RIGHT + VISUAL_BOX_SIZE;
                 this.buildCarousel();
             } else {
                 $CONTAINER.dataset.active = 0;
@@ -119,16 +117,14 @@ class CircularCarousel {
     buildCarousel() {
         const {
             arrowNext, arrowPrevious, itemSize,
-            visualBoxSize, items, moveItems, scroll,
+            visualBoxSize, items, moveItems,
         } = this.config;
         const CLONE = Math.floor(visualBoxSize / itemSize);
         const IS_CLONE = this.cloneItem(CLONE);
         if (IS_CLONE) {
             const PIXELS = itemSize * CLONE;
-            const END_POINT = (items * itemSize) + PIXELS;
             this.config.startPoint = PIXELS;
-            this.config.endPoint = END_POINT;
-            this.config.scroll = END_POINT - scroll;
+            this.config.endPoint = (items * itemSize) + PIXELS;
             this.config.pixels = itemSize * CLONE;
             this.config.moveItems = (moveItems === 0 || moveItems > CLONE) ? CLONE : moveItems;
             this.config.isActive = true;
@@ -147,19 +143,8 @@ class CircularCarousel {
      */
     buildSwipeCarousel() {
         const DEVICE = Utils.isMobile;
-        const { visualBox, scroll } = this.config;
-        const TRACK = visualBox.parentNode || null
-        window.track = TRACK;
-        console.log(this.config);
-        TRACK.addEventListener("scroll", () => {
-            const SCROLL = TRACK.scrollLeft;
-            if (SCROLL >= scroll) {
-                TRACK.scrollLeft = 0;
-                TRACK.removeAttribute("style");
-            }
-        });
 
-        if (DEVICE === "desktop1") {
+        if (DEVICE !== "desktop") {
             const { visualBox, swipe } = this.config;
             const PHONE = navigator.userAgent.toLowerCase();
             const IS_ANDROID = PHONE.indexOf("android");
