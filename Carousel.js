@@ -155,7 +155,6 @@ class CircularCarousel {
             const SCROLL = TRACK.scrollLeft;
             if (SCROLL >= scroll) {
                 TRACK.scrollLeft = 0;
-                TRACK.removeAttribute("style");
             }
         });
 
