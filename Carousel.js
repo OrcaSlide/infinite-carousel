@@ -156,8 +156,8 @@ class CircularCarousel {
             if (SCROLL >= scroll) {
                 TRACK.scrollLeft = pixels;
             }
-            if (SCROLL === 0) {
-                TRACK.scrollLeft = scroll - pixels;
+            if (SCROLL <= 0) {
+                TRACK.scrollLeft = scroll;
             }
         });
 
