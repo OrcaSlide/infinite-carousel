@@ -9,15 +9,21 @@
     width: 300px;
     border-radius: 10px;
     overflow: hidden;
-    background: #443b67;
+    background: $Color-2;
     display: block;
     text-decoration: none;
-    color: #b4abd8;
+    color: $Color-3;
     transition: opacity .2s ease-in-out;
+    will-change: transform;
+    position: relative;
+    transition: transform .5s ease;
 }
 
 .Items__ItemTypeA:hover {
-    opacity: .8;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 9px $Color-6;
+
+
 }
 
 .Items__ItemTypeATitleContainer,
@@ -63,10 +69,10 @@
 
 .Items__ItemTypeALabel {
     display: block;
-    background: #62f1b5;
+    background: $Color-4;
     padding: 15px;
     border-radius: 10px;
-    color: rgba(15, 121, 77, 0.9);
+    color: $Color-5;
     text-transform: uppercase;
     font-size: 10px;
 
