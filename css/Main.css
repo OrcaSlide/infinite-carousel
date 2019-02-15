@@ -1,3 +1,13 @@
+body {
+  background: #dadada;
+  color: #868686;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Display {
+  display: none;
+}
+
 .Title {
   font-family: "Righteous", cursive;
   text-align: center;
@@ -11,7 +21,7 @@
   font-size: 0.8em;
   text-align: center;
   margin: 0px 0px 5px 0px;
-  color: #6a4092;
+  color: #868686;
 }
 
 .Version {
@@ -19,17 +29,7 @@
   font-size: 0.6em;
   text-align: center;
   margin: 0px 0px 50px 0px;
-  color: #6a4092;
-}
-
-body {
-  background: #342344;
-  color: #dadaca;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.Display {
-  display: none;
+  color: #868686;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -395,7 +395,7 @@ template {
 .Carousel__Arrow-Next {
   background: none;
   border: none;
-  outline-color: #61f1b5;
+  outline-color: #6c89bf;
   transition: opacity 0.2s ease-in-out;
 }
 
@@ -408,7 +408,7 @@ template {
   width: 0;
   height: 0;
   border-top: 20px solid transparent;
-  border-right: 30px solid #61f1b5;
+  border-right: 30px solid #6c89bf;
   border-bottom: 20px solid transparent;
 }
 
@@ -416,7 +416,7 @@ template {
   width: 0;
   height: 0;
   border-top: 20px solid transparent;
-  border-left: 30px solid #61f1b5;
+  border-left: 30px solid #6c89bf;
   border-bottom: 20px solid transparent;
 }
 
@@ -431,6 +431,7 @@ template {
 
 .Carousel__Track {
   display: flex;
+  padding: 10%;
 }
 
 .Carousel__Item-Active,
@@ -443,13 +444,14 @@ template {
   content: "You are watching";
   width: 100%;
   height: 100%;
-  background: rgba(15, 162, 100, 0.9);
+  background: rgba(108, 137, 191, 0.9);
   position: absolute;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+  color: #cedcf5;
 }
 
 .Description {
@@ -463,11 +465,11 @@ template {
   font-family: "Righteous", cursive;
   font-size: 1.5em;
   letter-spacing: 0.06em;
-  color: #dadaca;
+  color: #868686;
 }
 .Description__Paragraph {
   margin: 10px 0px 20px;
-  color: #949494;
+  color: #868686;
 }
 
 .Items__ItemTypeAImage {
@@ -479,15 +481,19 @@ template {
   width: 300px;
   border-radius: 10px;
   overflow: hidden;
-  background: #443b67;
+  background: #fbfbfb;
   display: block;
   text-decoration: none;
-  color: #b4abd8;
+  color: #868686;
   transition: opacity 0.2s ease-in-out;
+  will-change: transform;
+  position: relative;
+  transition: transform 0.5s ease;
 }
 
 .Items__ItemTypeA:hover {
-  opacity: 0.8;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 9px #b3b3b3;
 }
 
 .Items__ItemTypeATitleContainer,
@@ -531,10 +537,10 @@ template {
 
 .Items__ItemTypeALabel {
   display: block;
-  background: #62f1b5;
+  background: #6c89bf;
   padding: 15px;
   border-radius: 10px;
-  color: rgba(15, 121, 77, 0.9);
+  color: #cedcf5;
   text-transform: uppercase;
   font-size: 10px;
 }
