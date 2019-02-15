@@ -1,0 +1,27 @@
+{
+    "carousel": {
+        "arrowNext": "#ArrowNext",
+        "arrowPrevious": "#ArrowPrevious",
+        "display": "flex",
+        "moveItems": 0,
+        "pin": null,
+        "time": 500,
+        "type": "card",
+        "viewBox": "#CarouselTrack"
+    },
+    "touch": {
+        "callback": null,
+        "swipe": {
+            "direction": "",
+            "endX": 0,
+            "endY": 0,
+            "max_x": 20,
+            "max_y": 80,
+            "min_x": 20,
+            "min_y": 80,
+            "startX": 0,
+            "startY": 0
+        },
+        "track": null
+    }
+}
