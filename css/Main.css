@@ -431,7 +431,7 @@ template {
 
 .Carousel__Track {
   display: flex;
-  padding: 10%;
+  padding: 10% 0 10% 0;
 }
 
 .Carousel__Item-Active,
