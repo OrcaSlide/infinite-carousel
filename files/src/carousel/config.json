@@ -2,7 +2,6 @@
     "carousel": {
         "arrowNext": "#ArrowNext",
         "arrowPrevious": "#ArrowPrevious",
-        "display": "flex",
         "moveItems": 0,
         "pin": null,
         "time": 500,

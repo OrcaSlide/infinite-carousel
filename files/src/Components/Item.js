@@ -26,12 +26,12 @@ const Item = props => (
             <div className="Items__ItemTypeACaption">
                 <div className="Items__ItemTypeATitleContainer">
                     <h3 className="Items__ItemTypeATitle">
-                        When you delete something, you’re making a choice to destroy it. To never see it again.
+                        When you delete something.
                     </h3>
                 </div>
                 <div className="Items__ItemTypeADescriptionContainer">
                     <p className="Items__ItemTypeADescription">
-                        Power belongs to the people that take it. Nothing to do with their hard work, strong ambitions, or rightful qualifications, no. The actual will to take is often the only thing that’s necessary.
+                        Power belongs to the people that take it. Nothing to do with their hard work, strong ambitions.
                     </p>
                 </div>
                 <div className="Items__ItemTypeADateContainer">

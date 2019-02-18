@@ -22,7 +22,6 @@ ReactDOM.hydrate(
 
         <Description titulo="2.- Card by Card" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
         <Carousel
-            modificar="-Card"
             index={2}
             items={15}
             child={{
@@ -34,7 +33,6 @@ ReactDOM.hydrate(
 
         <Description titulo="3.- ViewBox by ViewBox" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
         <Carousel
-            modificar="-Card"
             index={3}
             items={15}
             child={{
@@ -71,12 +69,13 @@ ReactDOM.hydrate(
 );
 document.onreadystatechange = () => {
     if (document.readyState === "complete") {
-            // "1.- Flow"console.time("CircularCarousel");
+        console.time("CircularCarousel");
+        // "1.- Flow"console.time("CircularCarousel");
         CircularCarousel.init = {
             arrowNext: "#Next1",
             arrowPrevious: "#Previous1",
             carouselTrack: "#Track1",
-            type: "flow",
+            type: "hswipe",
             pin: {
                 disabled: "Carousel__Item",
                 enabled: "Carousel__Item-Active",
@@ -99,7 +98,6 @@ document.onreadystatechange = () => {
             arrowNext: "#Next3",
             arrowPrevious: "#Previous3",
             carouselTrack: "#Track3",
-            moveItems: 0,
             pin: {
                 disabled: "Carousel__Item",
                 enabled: "Carousel__Item-Active",
@@ -110,8 +108,7 @@ document.onreadystatechange = () => {
             arrowNext: "#Next4",
             arrowPrevious: "#Previous4",
             carouselTrack: "#Track4",
-            moveItems: 0,
-            type: "flow",
+            type: "hswipe",
             pin: {
                 disabled: "Carousel__Item",
                 enabled: "Carousel__Item-Active",
@@ -122,8 +119,7 @@ document.onreadystatechange = () => {
             arrowNext: "#Next5",
             arrowPrevious: "#Previous5",
             carouselTrack: "#Track5",
-            moveItems: 0,
-            type: "flow",
+            type: "hswipe",
             pin: {
                 disabled: "Carousel__Item",
                 enabled: "Carousel__Item-Active",

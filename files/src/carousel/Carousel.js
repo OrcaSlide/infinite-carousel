@@ -15,8 +15,7 @@ class CircularCarousel {
      * @param {object} config Initial config for Carousel.
      */
     constructor(config) {
-        Object.assign(carousel, config);
-        this.config = { ...carousel };
+        this.config = { ...carousel, ...config };
         const {
             arrowNext, arrowPrevious,
             carouselTrack,
@@ -29,7 +28,7 @@ class CircularCarousel {
             const CHILDREN = $CONTAINER.children;
             const ITEMS = CHILDREN.length;
             const FIRS_CHILD = CHILDREN[0];
-            const GET_STYLES = window.getComputedStyle(FIRS_CHILD);
+            const GET_STYLES = Utils.getListCSS(FIRS_CHILD);
             const MARGIN_RIGHT = parseInt(GET_STYLES.marginRight, 10);
             const ITEM_SIZE = FIRS_CHILD.offsetWidth + parseInt(MARGIN_RIGHT, 10);
             const VISUAL_BOX_SIZE = $CONTAINER.offsetWidth;
@@ -40,6 +39,8 @@ class CircularCarousel {
                 this.config.viewBoxSize = VISUAL_BOX_SIZE;
                 this.config.success = IS_ACTIVE;
                 this.config.scroll = MARGIN_RIGHT + VISUAL_BOX_SIZE;
+                this.config.device = Utils.device;
+                this.config.brand = Utils.deviceBrand;
                 this.buildCarousel();
             } else {
                 $CONTAINER.dataset.active = 0;
@@ -144,36 +145,53 @@ class CircularCarousel {
     }
 
     /**
+     * enabled Hyper Swipe with scroll.
+     *
+     * @return {void}.
+     */
+    hypperSwipe() {
+        const { type, viewBox, device } = this.config;
+        const $TRACK = viewBox.parentNode || null;
+        if (device !== "desktop") {
+            if (type === "hswipe") {
+                $TRACK.style.WebkitOverflowScrolling = "touch";
+                $TRACK.style.overflow = "scroll";
+            }
+        }
+    }
+
+    /**
      * Enabled swipe in the carousel`s.
      *
      * @return {void}.
      */
     buildSwipeCarousel() {
-        const DEVICE = Utils.device;
-        if (DEVICE !== "desktop") {
+        const { device } = this.config;
+        if (device !== "desktop") {
+            this.hypperSwipe();
             const {
                 pixels, scroll,
-                type, viewBox,
+                type, viewBox, brand,
             } = this.config;
             const $TRACK = viewBox.parentNode || null;
             switch (type) {
-            case "flow":
+            case "hswipe":
                 $TRACK.addEventListener("scroll", () => {
                     const SCROLL = $TRACK.scrollLeft;
+                    const SCROLLING = $TRACK.style.WebkitOverflowScrolling;
                     if (SCROLL >= scroll) {
-                        $TRACK.style.WebkitOverflowScrolling = "auto";
+                        $TRACK.style.WebkitOverflowScrolling = (brand === "ios") ? "auto" : SCROLLING;
                         $TRACK.scrollLeft = pixels;
-                        $TRACK.style.WebkitOverflowScrolling = "touch";
+                        $TRACK.style.WebkitOverflowScrolling = (brand === "ios") ? "touch" : SCROLLING;
                     } else if (SCROLL <= 0) {
-                        $TRACK.style.WebkitOverflowScrolling = "auto";
+                        $TRACK.style.WebkitOverflowScrolling = (brand === "ios") ? "auto" : SCROLLING;
                         $TRACK.scrollLeft = scroll - pixels;
-                        $TRACK.style.WebkitOverflowScrolling = "touch";
+                        $TRACK.style.WebkitOverflowScrolling = (brand === "ios") ? "touch" : SCROLLING;
                     }
                 });
                 break;
             case "card":
             default:
-                console.log(this.config);
                 Utils.touchAction = {
                     callback: (direction) => {
                         const DIRECTIONS = ["left", "right"];
@@ -255,14 +273,18 @@ class CircularCarousel {
      * @return {Void}
      */
     hiddenArrow(show = false) {
-        const {
-            arrowNext: NEXT,
-            arrowPrevious: PREVIOUS,
-            display,
-        } = this.config;
-        const DISPLAY = (!show) ? "none" : display;
-        NEXT.parentNode.style.display = DISPLAY;
-        PREVIOUS.parentNode.style.display = DISPLAY;
+        const { arrowNext, arrowPrevious, device } = this.config;
+        const NEXT = arrowNext.parentNode.style;
+        const PREVIOUS = arrowPrevious.parentNode.style;
+        if (device === "desktop") {
+            const DISPLAY = (!show) ? "hidden" : "visible";
+            NEXT.visibility = DISPLAY;
+            PREVIOUS.visibility = DISPLAY;
+        } else {
+            const DISPLAY = (!show) ? "none" : "flex";
+            NEXT.display = DISPLAY;
+            PREVIOUS.display = DISPLAY;
+        }
     }
 
     /**
@@ -275,10 +297,9 @@ class CircularCarousel {
         const {
             viewBox: $CONTAINER,
             pixels, endPoint, startPoint,
-            time, type,
+            time, type, device,
         } = this.config;
-        const DEVICE = Utils.device;
-        if (DEVICE === "desktop" || type === "card") {
+        if (device === "desktop" || type === "card") {
             const TRANSFORM = `transform: translate3d(-${pixels}px, 0px, 0px);`;
             const TRANSITION = `transition:transform ${time}ms ease 0s`;
             const STYLE = TRANSFORM + ((live) ? TRANSITION : "");

@@ -84,6 +84,31 @@ class Utils {
         return request;
     }
 
+    /**
+     * Get list of CSS.
+     *
+     * @param  {DOM} domElement Reference to object dom.
+     * @return {function}
+     */
+    static getListCSS(domElement) {
+        const CSS_LIST = this.existFields(document, "defaultView.getComputedStyle", null);
+        const RESPONSE = (domElement && CSS_LIST) ? CSS_LIST(domElement) : null;
+        return RESPONSE;
+    }
+
+    /**
+     * get the operating system of the device
+     *
+     * @type {String}
+     */
+    static get deviceBrand() {
+        let agent = navigator.userAgent || "unknown";
+        agent = agent.toLowerCase();
+        agent = agent.match(/android/g) ? "android" : agent;
+        agent = agent.match(/ipod|iphone|ipad/g) ? "ios" : agent;
+        return agent;
+    }
+
     /* =================================================== */
     /*                     METODOS SET                     */
     /* =================================================== */
