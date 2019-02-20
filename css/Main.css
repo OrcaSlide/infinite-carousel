@@ -447,6 +447,7 @@ template {
   justify-content: center;
   text-transform: uppercase;
   color: #cedcf5;
+  z-index: 1;
 }
 
 .Description {
@@ -483,13 +484,12 @@ template {
   transition: opacity 0.2s ease-in-out;
   will-change: transform;
   position: relative;
-  transition: transform 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 
 @media (min-width: 768px) {
   .Items__ItemTypeA:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 9px #b3b3b3;
+    opacity: 0.8;
   }
 }
 .Items__ItemTypeATitleContainer,
