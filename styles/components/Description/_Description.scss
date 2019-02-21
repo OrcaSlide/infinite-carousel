@@ -1,0 +1,27 @@
+// Description | Raptor v0.0.2
+
+.Description {
+
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+
+    &__Title {
+
+        margin: 0px;
+        font-family: 'Righteous', cursive;
+        font-size: 1.5em;
+        letter-spacing: 0.06em;
+        color: $C-D3;
+
+    }
+
+    &__Paragraph {
+
+        margin: 10px 0px 20px;
+        color: $C-D3;
+
+    }
+
+}

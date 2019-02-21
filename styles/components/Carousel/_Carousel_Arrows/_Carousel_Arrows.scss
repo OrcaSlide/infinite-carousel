@@ -1,0 +1,38 @@
+// Carousel File | Raptor v0.0.2
+
+.Carousel__Arrow {
+
+    display: flex;
+    width: auto;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.Carousel__Arrow-Previous,
+.Carousel__Arrow-Next {
+    background: none;
+    border: none;
+    outline-color: $C-D4;
+    transition: opacity .2s ease-in-out;
+}
+
+.Carousel__Arrow-Previous:hover,
+.Carousel__Arrow-Next:hover {
+    opacity: .7;
+}
+
+.Carousel__Arrow-Previous {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-right: 30px solid $C-D4;
+    border-bottom: 20px solid transparent;
+}
+
+.Carousel__Arrow-Next {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 30px solid $C-D4;
+    border-bottom: 20px solid transparent;
+}

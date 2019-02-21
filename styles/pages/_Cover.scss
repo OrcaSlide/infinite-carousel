@@ -1,0 +1,20 @@
+// Cover File | Raptor v0.0.2
+
+.Cover {
+
+    background: $K-D1;
+    color: $K-D4;
+    font-family: Helvetica, sans-serif;
+
+    a {
+
+        color: $K-D5;
+        text-decoration: none;
+        transition: color .2s ease-out;
+
+        &:hover {
+
+            color: rgba($K-D5, .5);
+        }
+    }
+}

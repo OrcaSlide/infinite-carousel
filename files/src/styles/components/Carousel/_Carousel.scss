@@ -28,7 +28,7 @@
 .Carousel__Arrow-Next {
     background: none;
     border: none;
-    outline-color: $Color-4;
+    outline-color: $C-D4;
     transition: opacity .2s ease-in-out;
 }
 
@@ -41,7 +41,7 @@
     width: 0;
     height: 0;
     border-top: 20px solid transparent;
-    border-right: 30px solid $Color-4;
+    border-right: 30px solid $C-D4;
     border-bottom: 20px solid transparent;
 }
 
@@ -49,7 +49,7 @@
     width: 0;
     height: 0;
     border-top: 20px solid transparent;
-    border-left: 30px solid $Color-4;
+    border-left: 30px solid $C-D4;
     border-bottom: 20px solid transparent;
 }
 
