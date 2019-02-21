@@ -4,6 +4,9 @@
 
     max-width: 100%;
     font-size: 0;
+     transition: transform .3s ease-in-out;
+     will-change: transform;
+
 }
 
 .Items__ItemTypeA {
@@ -16,11 +19,24 @@
     text-decoration: none;
     color: $C-D3;
     position: relative;
+    //box-shadow: -1px 1px 4px $C-D6;
+
+    transition: transform .3s ease-in-out;
+    will-change: transform;
+
 }
 
 @media (min-width: 768px) {
 
     .Items__ItemTypeA:hover {
+
+        transform: scale(.97);
+
+        .Items__ItemTypeAImage {
+
+            transform: scale(1.06);
+
+        }
 
 
     }

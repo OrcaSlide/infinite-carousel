@@ -2,6 +2,10 @@
   display: none;
 }
 
+body {
+  Background: #3c3c48;
+}
+
 .Wrapper__Content {
   max-width: 1140px;
   margin: auto;
@@ -257,7 +261,7 @@ template {
 .Carousel__Item-Active,
 .Carousel__Item {
   position: relative;
-  margin-right: 13px;
+  padding: 5px;
 }
 
 .Carousel__Item-Active:before {
@@ -302,6 +306,8 @@ template {
 .Items__ItemTypeAImage {
   max-width: 100%;
   font-size: 0;
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
 }
 
 .Items__ItemTypeA {
@@ -313,8 +319,18 @@ template {
   text-decoration: none;
   color: #868686;
   position: relative;
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
 }
 
+@media (min-width: 768px) {
+  .Items__ItemTypeA:hover {
+    transform: scale(0.97);
+  }
+  .Items__ItemTypeA:hover .Items__ItemTypeAImage {
+    transform: scale(1.06);
+  }
+}
 .Items__ItemTypeATitleContainer,
 .Items__ItemTypeADescriptionContainer,
 .Items__ItemTypeATimeContainer,
