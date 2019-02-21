@@ -1,6 +1,15 @@
-// Main
+// Main File | Raptor v0.0.2
 
+@charset 'utf-8';
+
+// Settings
 @import './settings/Settings';
-@import './global/Global';
-@import './global/Reset';
+
+// Globals
+@import './globals/Globals';
+
+// Pages
+@import './pages/Pages';
+
+// Components
 @import './components/Components';

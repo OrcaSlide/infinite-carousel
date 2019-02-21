@@ -1,30 +1,50 @@
-// Components
+// Item File | Raptor v0.0.2
 
 .Items__ItemTypeAImage {
+
     max-width: 100%;
     font-size: 0;
+     transition: transform .3s ease-in-out;
+     will-change: transform;
+
 }
 
-.Items__ItemTypeA {
-    width: 250px;
-    border-radius: 10px;
+.Items__ItemTypeA,
+.Items__ItemTypeA-Active {
+
+    width: 180px;
+    border-radius: 6px;
     overflow: hidden;
-    background: $Color-2;
+    background: $C-D2;
     display: block;
     text-decoration: none;
-    color: $Color-3;
-    transition: opacity .2s ease-in-out;
-    will-change: transform;
+    color: $C-D3;
     position: relative;
-    transition: opacity .5s ease;
+    //box-shadow: -1px 1px 4px $C-D6;
+
+    transition: transform .3s ease-in-out;
+    will-change: transform;
+
+    @include Morpher (All-Desktop) {
+
+        width: 200px;
+
+
+    }
+
 }
 
 @media (min-width: 768px) {
 
     .Items__ItemTypeA:hover {
-        // transform: scale(1.1);
-        // box-shadow: 0px 0px 9px $Color-6;
-        opacity: .8;
+
+        transform: scale(.97);
+
+        .Items__ItemTypeAImage {
+
+            transform: scale(1.06);
+
+        }
 
 
     }
@@ -37,34 +57,45 @@
 .Items__ItemTypeADateContainer,
 .Items__ItemTypeAAutorContainer,
 .Items__ItemTypeALabelContainer {
-    padding: 0px 20px;
+
+    padding: 0px 12px;
     box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
+
     .Carousel__Arrow-Previous,
     .Carousel__Arrow-Next {
+
         display: none;
     }
 }
 
 .Items__ItemTypeATitle {
+
+    @include Headline;
     margin: 0px;
 }
 
 .Items__ItemTypeADescription {
+
+    @include Text;
     margin: 0px;
+
 }
 
 .Items__ItemTypeATitleContainer {
-    margin: 15px 0px;
+
+    margin: 12px 0px;
 }
 
 .Items__ItemTypeADescriptionContainer {
-    margin: 0px 0px 15px 0px;
+
+    margin: 0px 0px 12px 0px;
 }
 
 .Items__ItemTypeALabelContainer {
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,25 +104,29 @@
 }
 
 .Items__ItemTypeALabel {
+
     display: block;
-    background: $Color-4;
-    padding: 15px;
-    border-radius: 10px;
-    color: $Color-5;
-    text-transform: uppercase;
-    font-size: 10px;
+    background: $C-D4;
+    padding: 10px;
+    border-radius: 6px;
+    color: $C-D5;
+
+    @include Button;
 
 }
 
 .Items__ItemTypeAAutor {
-    font-size: 10px;
+
+    @include Credit;
+
     text-align: right;
     display: block;
 
 }
 
 .Items__ItemTypeADate {
-    font-size: 10px;
+
+    @include Credit;
     text-align: left;
     display: block;
 
@@ -104,6 +139,7 @@
 }
 
 .Items__ItemTypeAAutorContainer {
+
     width: 50%;
     float: right;
 
@@ -111,7 +147,26 @@
 
 .Items__ItemTypeADateContainer,
 .Items__ItemTypeAAutorContainer {
-    margin: 0px 0px 20px 0px;
+
+    margin: 0px 0px 12px 0px;
 
 
+}
+
+.Items__ItemTypeA-Active:before {
+
+    content: 'You are watching';
+    width: 100%;
+    height: 100%;
+    background: rgba($C-D4, 0.9);
+    position: absolute;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: $C-D5;
+    font-family: Helvetica, sans-serif;
+    font-size: .9em;
+    z-index: 1;
 }

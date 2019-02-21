@@ -1,30 +1,99 @@
-<!DOCTYPE html>
-<html lang="es, en">
+<!doctype html>
+<html class="no-js" lang="en, es">
+
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="icon" href="./favicon.ico?v=3" type="image/x-icon">
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Kolibri HTML Basic Structure</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
         <link rel="stylesheet" href="./css/Main.css">
-        <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
-        <title>.: Circle Carousel :.</title>
+        <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+
     </head>
-    <body>
-        <main class="Wrapper">
+
+    <body class="CoverBackground">
+
+        <main class="Cover">
+
+            <div class="TitleContainer">
+                <h1 class="Title">
+                    Infinite Carousel
+                </h1>
+            </div>
+
+            <section class="Dialer">
+                <a class="Button" href="./fluid.html">
+                    Fluid
+                </a>
+
+                <span class="Dialer__Description">
+                    Movimiento "líquido" Horizontal.
+                </span>
+
+                <a class="Button" href="./card-by-card.html">
+                    Card by Card
+                </a>
+
+                <span class="Dialer__Description">
+                    Translado horizontal item por item.
+                </span>
+
+                <a class="Button" href="./viewbox-by-viewbox.html">
+                    ViewBox by ViewBox
+                </a>
+
+                <span class="Dialer__Description">
+                    Translado horizontal del grupo visible de elementos en pantalla.
+                </span>
+
+            </section class="Dialers">
+
+            <section class="WrapperText">
+
+                <p>
+                    Este desarrollo de Infinite Carousel cuenta con dos variantes en su funcionalidad.
+                </p>
+                <h2>
+                    Características:
+                </h2>
+                <h3>
+                    Mobile
+                </h3>
+                <ul>
+                    <li>
+                        Swipe infinito en Mobile
+                    </li>
+                    <li>
+                        Máximo de 15 elementos
+                    </li>
+                    <li>
+                        Active Element Ready. Resaltado de elemento activo que indica Card seleccionado. (Característica para trabajar en conjunto con Sliders)
+                    </li>
+                </ul>
+                <h3>
+                    Desktop
+                </h3>
+                <ul>
+                    <li>
+                        Scroll Horizontal infinito en Desktop
+                    </li>
+                    <li>
+                        Máximo de 15 elementos
+                    </li>
+                    <li>
+                        Al no cumplir con el minimo de elementos equivalentes al ancho del ViewBox los Card se mantendrán centrados y la funcionalidad de Carousel no se aplicará.
+                    </li>
+                    <li>
+                        Active Element Ready. Resaltado de elemento activo que indica Card seleccionado. (Característica para trabajar en conjunto con Sliders)
+                    </li>
+                </ul>
+
+            </section>
+
         </main>
-        <!-- Credits -->
-        <h3 class="Credits">
-            Con 💜de Neza y Tlatelolco para el 🌎
-        </h3>
-        <h3 class="Credits">
-            by Jorge Méndez 🤟(Konami12) & Alan Mena 🦄(Kolibri)
-        </h3>
-        <h2 class="Version">
-            January 2019 v0.8.0
-        </h2>
-        <!-- End of Credits -->
-        <script type="text/javascript" src="./js/Carousel-dist.js"></script>
+       <script type="text/javascript" src="./js/Carousel-dist-main.js"></script>
     </body>
+
 </html>

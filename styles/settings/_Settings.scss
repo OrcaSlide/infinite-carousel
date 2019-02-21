@@ -1,10 +1,24 @@
-// Settings
+// Settings File | Raptor v0.0.2
 
-// Colors
+$Breakpoints: (
+    Smartphone: (0px,414px),
+    Tablet: (415px,768px),
+    Laptop: (769px,1024px),
+    Desktop: (1025px,1280px),
+    Desktop-HD: (1281px, 1440px),
+    All-Desktop: (769px)
+);
 
-$Color-1: #dadada; // Main
-$Color-2: #fbfbfb; // Secondary
-$Color-3: #868686; // Text
-$Color-4: #6c89bf; // Interaction
-$Color-5: #cedcf5; // Text Light
-$Color-6: #b3b3b3; // Shadow
+.Display {
+
+    display: none;
+}
+
+// Drops
+@import './Engines/Drops/Drops';
+
+// Shaper
+@import './Engines/Shaper/Shaper';
+
+// Morpher
+@import './Engines/Morpher/Morpher';

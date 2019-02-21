@@ -1,0 +1,73 @@
+// Cover File | Raptor v0.0.2
+
+.CoverBackground {
+
+    background: $K-D1;
+
+}
+
+.Cover {
+
+    color: $K-D4;
+    font-family: Helvetica, sans-serif;
+    overflow: hidden;
+
+    a {
+
+        color: $K-D5;
+        text-decoration: none;
+        transition: color .2s ease-out;
+
+        &:hover {
+
+            color: rgba($K-D5, .5);
+        }
+    }
+}
+
+.TitleContainer {
+
+    width: 100%;
+    background: $C-D7;
+    margin-top: 2em;
+    position: relative;
+    margin-bottom: 4em;
+
+    @media (max-width: 768px) {
+
+        &::before {
+
+            content: "";
+            width: 100%;
+            height: 12px;
+            position: absolute;
+            background: $C-D7;
+            transform: rotate(-4.3deg) scale(2);
+            top: -10px;
+            z-index: -1;
+        }
+
+        &::after {
+
+            content: "";
+            width: 100%;
+            height: 12px;
+            position: absolute;
+            background: $C-D7;
+            transform: rotate(-4.9deg) scale(2);
+            bottom: -10px;
+            z-index: -1;
+        }
+    }
+}
+
+.Title {
+
+    @include CoverHeadline;
+    text-align: center;
+    font-size: 5em;
+    line-height: .85em;
+    padding: .4em;
+    max-width: 1140px;
+    margin: auto;
+}

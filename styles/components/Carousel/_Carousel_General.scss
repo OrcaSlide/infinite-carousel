@@ -1,0 +1,16 @@
+// Carousel File | Raptor v0.0.2
+
+.Carousel {
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+
+    .Carousel {
+
+        display: block;
+    }
+}
