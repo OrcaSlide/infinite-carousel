@@ -311,7 +311,7 @@ template {
 }
 
 .Items__ItemTypeA {
-  width: 200px;
+  width: 180px;
   border-radius: 6px;
   overflow: hidden;
   background: #fbfbfb;
@@ -321,6 +321,11 @@ template {
   position: relative;
   transition: transform 0.3s ease-in-out;
   will-change: transform;
+}
+@media (min-width: 769px) {
+  .Items__ItemTypeA {
+    width: 200px;
+  }
 }
 
 @media (min-width: 768px) {

@@ -11,7 +11,7 @@
 
 .Items__ItemTypeA {
 
-    width: 200px;
+    width: 180px;
     border-radius: 6px;
     overflow: hidden;
     background: $C-D2;
@@ -23,6 +23,13 @@
 
     transition: transform .3s ease-in-out;
     will-change: transform;
+
+    @include Morpher (All-Desktop) {
+
+        width: 200px;
+
+
+    }
 
 }
 
