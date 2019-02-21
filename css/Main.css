@@ -534,6 +534,8 @@ nav a {
   text-transform: uppercase;
   font-family: Helvetica, sans-serif;
   transition: color 0.2s ease;
+  font-size: 0.8em;
+  text-align: center;
 }
 nav a:hover {
   color: #F86363;
