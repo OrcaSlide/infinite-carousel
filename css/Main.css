@@ -510,4 +510,40 @@ template {
   max-width: 250px;
 }
 
+header {
+  background: #0D0D0D;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 10%;
+}
+
+nav {
+  max-width: 1140px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: center;
+  justify-items: center;
+  margin: auto;
+}
+nav a {
+  text-decoration: none;
+  color: #484848;
+  text-transform: uppercase;
+  font-family: Helvetica, sans-serif;
+  transition: color 0.2s ease;
+}
+nav a:hover {
+  color: #F86363;
+}
+nav a:nth-child(2) {
+  font-family: "Staatliches", cursive;
+  font-display: auto;
+  font-size: 1.4em;
+  color: #D0D0D0;
+  text-align: center;
+}
+
 /*# sourceMappingURL=Main.css.map */
