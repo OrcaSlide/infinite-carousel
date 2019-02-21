@@ -27,6 +27,8 @@ nav {
         text-transform: uppercase;
         font-family: Helvetica, sans-serif;
         transition: color .2s ease;
+        font-size: .8em;
+        text-align: center;
 
         &:hover {
             color: $K-D6;
