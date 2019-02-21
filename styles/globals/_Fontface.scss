@@ -1,1 +1,33 @@
 // Fontface File | Raptor v0.0.2
+
+@mixin Headline {
+
+    font-family: 'Oswald', sans-serif;
+    font-display: auto;
+    font-size: 1em;
+
+}
+
+@mixin Text {
+
+    font-family: Helvetica, sans-serif;
+    font-size: .82em;
+    line-height: 1.25em;
+    letter-spacing: .01em;
+}
+
+@mixin Button {
+
+    text-transform: uppercase;
+    font-size: 10px;
+    font-family: Helvetica, sans-serif;
+}
+
+@mixin Credit {
+
+    font-size: .5em;
+    text-transform: uppercase;
+    font-family: Helvetica, sans-serif;
+
+
+}

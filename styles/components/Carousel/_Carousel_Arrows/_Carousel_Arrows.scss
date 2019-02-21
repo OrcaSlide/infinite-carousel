@@ -5,14 +5,13 @@
     display: flex;
     width: auto;
     align-items: center;
-    padding: 0px 10px;
 }
 
 .Carousel__Arrow-Previous,
 .Carousel__Arrow-Next {
     background: none;
     border: none;
-    outline-color: $C-D4;
+    outline: none;
     transition: opacity .2s ease-in-out;
 }
 

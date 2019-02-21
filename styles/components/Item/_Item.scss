@@ -1,29 +1,26 @@
 // Item File | Raptor v0.0.2
 
 .Items__ItemTypeAImage {
+
     max-width: 100%;
     font-size: 0;
 }
 
 .Items__ItemTypeA {
-    width: 250px;
-    border-radius: 10px;
+
+    width: 200px;
+    border-radius: 6px;
     overflow: hidden;
     background: $C-D2;
     display: block;
     text-decoration: none;
     color: $C-D3;
-    transition: opacity .2s ease-in-out;
-    will-change: transform;
     position: relative;
-    transition: transform .5s ease;
 }
 
 @media (min-width: 768px) {
 
     .Items__ItemTypeA:hover {
-        transform: scale(1.1);
-        box-shadow: 0px 0px 9px $C-D6;
 
 
     }
@@ -36,34 +33,45 @@
 .Items__ItemTypeADateContainer,
 .Items__ItemTypeAAutorContainer,
 .Items__ItemTypeALabelContainer {
-    padding: 0px 20px;
+
+    padding: 0px 12px;
     box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
+
     .Carousel__Arrow-Previous,
     .Carousel__Arrow-Next {
+
         display: none;
     }
 }
 
 .Items__ItemTypeATitle {
+
+    @include Headline;
     margin: 0px;
 }
 
 .Items__ItemTypeADescription {
+
+    @include Text;
     margin: 0px;
+
 }
 
 .Items__ItemTypeATitleContainer {
-    margin: 15px 0px;
+
+    margin: 12px 0px;
 }
 
 .Items__ItemTypeADescriptionContainer {
-    margin: 0px 0px 15px 0px;
+
+    margin: 0px 0px 12px 0px;
 }
 
 .Items__ItemTypeALabelContainer {
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,25 +80,29 @@
 }
 
 .Items__ItemTypeALabel {
+
     display: block;
     background: $C-D4;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 10px;
+    border-radius: 6px;
     color: $C-D5;
-    text-transform: uppercase;
-    font-size: 10px;
+
+    @include Button;
 
 }
 
 .Items__ItemTypeAAutor {
-    font-size: 10px;
+
+    @include Credit;
+
     text-align: right;
     display: block;
 
 }
 
 .Items__ItemTypeADate {
-    font-size: 10px;
+
+    @include Credit;
     text-align: left;
     display: block;
 
@@ -103,6 +115,7 @@
 }
 
 .Items__ItemTypeAAutorContainer {
+
     width: 50%;
     float: right;
 
@@ -110,7 +123,8 @@
 
 .Items__ItemTypeADateContainer,
 .Items__ItemTypeAAutorContainer {
-    margin: 0px 0px 20px 0px;
+
+    margin: 0px 0px 12px 0px;
 
 
 }

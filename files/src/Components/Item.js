@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Item = props => (
-    <div className={`Carousel__Item${props.active}`}>
-        <a href="#" className="Items__ItemTypeA">
+    <div className="Carousel__Item">
+        <a href="#" className={`Items__ItemTypeA${props.active}`}>
             <div className="Items__ItemTypeAThumbnail">
                 <div className="Items__ItemTypeAImageContainer">
                     <picture>

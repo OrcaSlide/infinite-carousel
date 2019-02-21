@@ -1,5 +1,14 @@
 // Globals File | Raptor v0.0.2
 
+.Wrapper {
+
+    &__Content {
+        max-width: 1140px;
+        margin: auto;
+
+    }
+}
+
 // Reset
 @import './Reset';
 

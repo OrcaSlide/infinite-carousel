@@ -2,6 +2,11 @@
   display: none;
 }
 
+.Wrapper__Content {
+  max-width: 1140px;
+  margin: auto;
+}
+
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -198,8 +203,7 @@ template {
 }
 
 .Carousel {
-  margin: 0px auto 30px;
-  max-width: 1140px;
+  margin: auto;
   position: relative;
   display: flex;
   justify-content: center;
@@ -214,14 +218,13 @@ template {
   display: flex;
   width: auto;
   align-items: center;
-  padding: 0px 10px;
 }
 
 .Carousel__Arrow-Previous,
 .Carousel__Arrow-Next {
   background: none;
   border: none;
-  outline-color: #6c89bf;
+  outline: none;
   transition: opacity 0.2s ease-in-out;
 }
 
@@ -248,13 +251,13 @@ template {
 
 .Carousel__Track {
   display: flex;
-  padding: 10% 0px 10% 0px;
+  will-change: transform;
 }
 
 .Carousel__Item-Active,
 .Carousel__Item {
-  margin-right: 20px;
   position: relative;
+  margin-right: 13px;
 }
 
 .Carousel__Item-Active:before {
@@ -263,12 +266,15 @@ template {
   height: 100%;
   background: rgba(108, 137, 191, 0.9);
   position: absolute;
-  border-radius: 10px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
   color: #cedcf5;
+  font-family: Helvetica, sans-serif;
+  font-size: 0.9em;
+  z-index: 1;
 }
 
 .Carousel__ViewBox {
@@ -299,32 +305,23 @@ template {
 }
 
 .Items__ItemTypeA {
-  width: 250px;
-  border-radius: 10px;
+  width: 200px;
+  border-radius: 6px;
   overflow: hidden;
   background: #fbfbfb;
   display: block;
   text-decoration: none;
   color: #868686;
-  transition: opacity 0.2s ease-in-out;
-  will-change: transform;
   position: relative;
-  transition: transform 0.5s ease;
 }
 
-@media (min-width: 768px) {
-  .Items__ItemTypeA:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 9px #b3b3b3;
-  }
-}
 .Items__ItemTypeATitleContainer,
 .Items__ItemTypeADescriptionContainer,
 .Items__ItemTypeATimeContainer,
 .Items__ItemTypeADateContainer,
 .Items__ItemTypeAAutorContainer,
 .Items__ItemTypeALabelContainer {
-  padding: 0px 20px;
+  padding: 0px 12px;
   box-sizing: border-box;
 }
 
@@ -335,19 +332,26 @@ template {
   }
 }
 .Items__ItemTypeATitle {
+  font-family: "Oswald", sans-serif;
+  font-display: auto;
+  font-size: 1em;
   margin: 0px;
 }
 
 .Items__ItemTypeADescription {
+  font-family: Helvetica, sans-serif;
+  font-size: 0.82em;
+  line-height: 1.25em;
+  letter-spacing: 0.01em;
   margin: 0px;
 }
 
 .Items__ItemTypeATitleContainer {
-  margin: 15px 0px;
+  margin: 12px 0px;
 }
 
 .Items__ItemTypeADescriptionContainer {
-  margin: 0px 0px 15px 0px;
+  margin: 0px 0px 12px 0px;
 }
 
 .Items__ItemTypeALabelContainer {
@@ -360,21 +364,26 @@ template {
 .Items__ItemTypeALabel {
   display: block;
   background: #6c89bf;
-  padding: 15px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 6px;
   color: #cedcf5;
   text-transform: uppercase;
   font-size: 10px;
+  font-family: Helvetica, sans-serif;
 }
 
 .Items__ItemTypeAAutor {
-  font-size: 10px;
+  font-size: 0.5em;
+  text-transform: uppercase;
+  font-family: Helvetica, sans-serif;
   text-align: right;
   display: block;
 }
 
 .Items__ItemTypeADate {
-  font-size: 10px;
+  font-size: 0.5em;
+  text-transform: uppercase;
+  font-family: Helvetica, sans-serif;
   text-align: left;
   display: block;
 }
@@ -391,7 +400,7 @@ template {
 
 .Items__ItemTypeADateContainer,
 .Items__ItemTypeAAutorContainer {
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 12px 0px;
 }
 
 /*# sourceMappingURL=Main.css.map */
