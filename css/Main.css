@@ -499,7 +499,7 @@ template {
 }
 
 .Button {
-  background: #f15757;
+  background: #e25858;
   display: block;
   width: 100%;
   height: 60px;
@@ -508,6 +508,9 @@ template {
   align-items: center;
   border-radius: 10px;
   max-width: 250px;
+  font-size: 1.4em;
+  font-family: "Staatliches", cursive;
+  font-display: auto;
 }
 
 header {
@@ -538,7 +541,7 @@ nav a {
   text-align: center;
 }
 nav a:hover {
-  color: #f15757;
+  color: #e25858;
 }
 nav a:nth-child(2) {
   font-family: "Staatliches", cursive;
