@@ -9,21 +9,51 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link rel="stylesheet" href="./css/Main.css">
-        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
 
     </head>
 
-    <body>
+    <body class="CoverBackground">
 
         <main class="Cover">
 
-            <h1 class="Title">
-                Infinite Carousel
-            </h1>
+            <div class="TitleContainer">
+                <h1 class="Title">
+                    Infinite Carousel
+                </h1>
+            </div>
 
-            <div class="">
+            <section class="Dialer">
+                <a class="Button" href="./fluid.html">
+                    Fluid
+                </a>
+
+                <span class="Dialer__Description">
+                    Movimiento "líquido" Horizontal.
+                </span>
+
+                <a class="Button" href="./card-by-card.html">
+                    Card by Card
+                </a>
+
+                <span class="Dialer__Description">
+                    Translado horizontal item por item.
+                </span>
+
+                <a class="Button" href="./viewbox-by-viewbox.html">
+                    ViewBox by ViewBox
+                </a>
+
+                <span class="Dialer__Description">
+                    Translado horizontal del grupo visible de elementos en pantalla.
+                </span>
+
+            </section class="Dialers">
+
+            <section class="WrapperText">
+
                 <p>
-                    Este desarrollo de Carousel cuenta con dos variantes en su funcionalidad.
+                    Este desarrollo de Infinite Carousel cuenta con dos variantes en su funcionalidad.
                 </p>
                 <h2>
                     Características:
@@ -59,14 +89,8 @@
                         Active Element Ready. Resaltado de elemento activo que indica Card seleccionado. (Característica para trabajar en conjunto con Sliders)
                     </li>
                 </ul>
-            </div>
 
-            <a href="./fluid.html">
-                Fluid
-            </a>
-            <a href="./card-by-card.html">
-                Card by Card
-            </a>
+            </section>
 
         </main>
        <script type="text/javascript" src="./js/Carousel-dist-main.js"></script>

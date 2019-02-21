@@ -2,10 +2,6 @@
   display: none;
 }
 
-body {
-  Background: #3c3c48;
-}
-
 .Wrapper__Content {
   max-width: 1140px;
   margin: auto;
@@ -192,10 +188,14 @@ template {
   display: none;
 }
 
-.Cover {
+.CoverBackground {
   background: #0D0D0D;
+}
+
+.Cover {
   color: #E5E5E5;
   font-family: Helvetica, sans-serif;
+  overflow: hidden;
 }
 .Cover a {
   color: #D0D0D0;
@@ -204,6 +204,62 @@ template {
 }
 .Cover a:hover {
   color: rgba(208, 208, 208, 0.5);
+}
+
+.TitleContainer {
+  width: 100%;
+  background: #3c3c48;
+  margin-top: 2em;
+  position: relative;
+  margin-bottom: 4em;
+}
+@media (max-width: 768px) {
+  .TitleContainer::before {
+    content: "";
+    width: 100%;
+    height: 12px;
+    position: absolute;
+    background: #3c3c48;
+    transform: rotate(-4.3deg) scale(2);
+    top: -10px;
+    z-index: -1;
+  }
+  .TitleContainer::after {
+    content: "";
+    width: 100%;
+    height: 12px;
+    position: absolute;
+    background: #3c3c48;
+    transform: rotate(-4.9deg) scale(2);
+    bottom: -10px;
+    z-index: -1;
+  }
+}
+
+.Title {
+  font-family: "Staatliches", cursive;
+  font-display: auto;
+  text-align: center;
+  font-size: 5em;
+  line-height: 0.85em;
+  padding: 0.4em;
+  max-width: 1140px;
+  margin: auto;
+}
+
+.ViewBoxXViewBoxBackground,
+.FluidBackground,
+.CardXCardBackground {
+  background: #3c3c48;
+}
+
+.WrapperText {
+  max-width: 700px;
+  padding: 5%;
+  margin: auto;
+  font-size: 0.9em;
+  font-weight: 100;
+  border: solid 1px #2d2d2d;
 }
 
 .Carousel {
@@ -258,27 +314,9 @@ template {
   will-change: transform;
 }
 
-.Carousel__Item-Active,
 .Carousel__Item {
   position: relative;
   padding: 5px;
-}
-
-.Carousel__Item-Active:before {
-  content: "You are watching";
-  width: 100%;
-  height: 100%;
-  background: rgba(108, 137, 191, 0.9);
-  position: absolute;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  color: #cedcf5;
-  font-family: Helvetica, sans-serif;
-  font-size: 0.9em;
-  z-index: 1;
 }
 
 .Carousel__ViewBox {
@@ -310,7 +348,8 @@ template {
   will-change: transform;
 }
 
-.Items__ItemTypeA {
+.Items__ItemTypeA,
+.Items__ItemTypeA-Active {
   width: 180px;
   border-radius: 6px;
   overflow: hidden;
@@ -323,7 +362,8 @@ template {
   will-change: transform;
 }
 @media (min-width: 769px) {
-  .Items__ItemTypeA {
+  .Items__ItemTypeA,
+.Items__ItemTypeA-Active {
     width: 200px;
   }
 }
@@ -422,6 +462,52 @@ template {
 .Items__ItemTypeADateContainer,
 .Items__ItemTypeAAutorContainer {
   margin: 0px 0px 12px 0px;
+}
+
+.Items__ItemTypeA-Active:before {
+  content: "You are watching";
+  width: 100%;
+  height: 100%;
+  background: rgba(108, 137, 191, 0.9);
+  position: absolute;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: #cedcf5;
+  font-family: Helvetica, sans-serif;
+  font-size: 0.9em;
+  z-index: 1;
+}
+
+.Dialer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1140px;
+  padding: 0 5%;
+  margin: auto;
+}
+.Dialer__Description {
+  text-align: center;
+  margin: 1em 0 2em 0;
+  font-size: 0.8em;
+  color: #9a9a9a;
+  font-weight: 300;
+}
+
+.Button {
+  background: #F86363;
+  display: block;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  max-width: 250px;
 }
 
 /*# sourceMappingURL=Main.css.map */

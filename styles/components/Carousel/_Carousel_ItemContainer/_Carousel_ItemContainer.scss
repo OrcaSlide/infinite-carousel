@@ -1,27 +1,7 @@
 // Carousel File | Raptor v0.0.2
 
-.Carousel__Item-Active,
 .Carousel__Item {
-
 
     position: relative;
     padding: 5px;
-}
-
-.Carousel__Item-Active:before {
-
-    content: 'You are watching';
-    width: 100%;
-    height: 100%;
-    background: rgba($C-D4, 0.9);
-    position: absolute;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    color: $C-D5;
-    font-family: Helvetica, sans-serif;
-    font-size: .9em;
-    z-index: 1;
 }
